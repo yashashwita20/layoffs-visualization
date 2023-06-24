@@ -4,6 +4,10 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 
+# !pip install pipreqsnb
+
+# ! pipreqsnb . --force
+
 # +
 import json
 
