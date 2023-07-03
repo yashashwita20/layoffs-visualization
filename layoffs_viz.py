@@ -343,4 +343,3 @@ try:
 except Exception as e:
     
     st.error('Try another combination of filters')
-    st.write(e)
