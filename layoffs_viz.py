@@ -243,7 +243,7 @@ try:
             large_categories = industry_group[industry_group['Industry']!='Other'].head(8)
             other_categories = industry_group[~industry_group['Industry'].isin(large_categories['Industry'].unique())]['# Laid Off'].sum()
             large_categories.loc[len(large_categories)] = {'Industry': 'Other', '# Laid Off': other_categories}
-            #large_categories = large_categories.append({'Industry': 'Other', '# Laid Off': other_categories}, ignore_index=True)
+            
         else:
             large_categories = industry_group.copy()
         
@@ -268,7 +268,7 @@ try:
         if len(stage_group[stage_group['Stage']!='Other'])>=8:
             large_categories = stage_group[stage_group['Stage']!='Other'].head(8)
             other_categories = stage_group[~stage_group['Stage'].isin(large_categories['Stage'].unique())]['# Laid Off'].sum()
-            large_categories = large_categories.append({'Stage': 'Other', '# Laid Off': other_categories}, ignore_index=True)
+            large_categories.loc[len(large_categories)] = {'Stage': 'Other', '# Laid Off': other_categories}
         else:
             large_categories = stage_group.copy()
         
