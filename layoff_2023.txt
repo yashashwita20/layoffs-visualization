@@ -240,28 +240,95 @@
               "selpUWrqn4X9Magb1",
               "selBOpva0rdBaQVmq",
               "selgFxl6Lt3VPQX8L",
-              "sel4oVP4hhzKnLRwj"
+              "sel4oVP4hhzKnLRwj",
+              "sely9MrB4M3UkiAH7",
+              "selF1QVyJ96sezHrK"
             ],
             "choices": {
+              "selaY0t9IlOz71lPt": {
+                "color": "cyan",
+                "name": "New York City",
+                "id": "selaY0t9IlOz71lPt"
+              },
+              "sel4xFmzIJcPrnGBs": {
+                "color": "orange",
+                "name": "Los Angeles",
+                "id": "sel4xFmzIJcPrnGBs"
+              },
               "selKhBn9WkXIaFjXW": {
                 "color": "blue",
                 "name": "SF Bay Area",
                 "id": "selKhBn9WkXIaFjXW"
+              },
+              "selwgWRJpOwx2s1A9": {
+                "color": "orangeDark",
+                "name": "Bengaluru",
+                "id": "selwgWRJpOwx2s1A9"
+              },
+              "sel8GpsCiYX4oM0Yl": {
+                "name": "Non-U.S.",
+                "color": "grayDarker",
+                "id": "sel8GpsCiYX4oM0Yl"
+              },
+              "selF1QVyJ96sezHrK": {
+                "id": "selF1QVyJ96sezHrK",
+                "name": "Ra'anana",
+                "color": "blue"
+              },
+              "seleheU73ufD0GKoU": {
+                "color": "grayMedium",
+                "name": "Mexico City",
+                "id": "seleheU73ufD0GKoU"
+              },
+              "selSMGjYDL3JsHfVa": {
+                "color": "greenDark",
+                "name": "Montreal",
+                "id": "selSMGjYDL3JsHfVa"
+              },
+              "selUIARvta4ZrMQ4S": {
+                "color": "pinkMedium",
+                "name": "Seattle",
+                "id": "selUIARvta4ZrMQ4S"
+              },
+              "sely9MrB4M3UkiAH7": {
+                "id": "sely9MrB4M3UkiAH7",
+                "name": "Førde",
+                "color": "blue"
+              },
+              "selTu0xn10SaLljFb": {
+                "color": "pinkDarker",
+                "name": "Lagos",
+                "id": "selTu0xn10SaLljFb"
+              },
+              "selh1UXiAoacwyW34": {
+                "color": "yellow",
+                "name": "Toronto",
+                "id": "selh1UXiAoacwyW34"
+              },
+              "selEHIWQ5r9QoerEQ": {
+                "color": "cyanDarker",
+                "name": "Detroit",
+                "id": "selEHIWQ5r9QoerEQ"
+              },
+              "selulLRA47dkdEV1m": {
+                "id": "selulLRA47dkdEV1m",
+                "name": "Boise",
+                "color": "greenDarker"
               },
               "sel4oVP4hhzKnLRwj": {
                 "id": "sel4oVP4hhzKnLRwj",
                 "name": "Alamosa",
                 "color": "orangeDarker"
               },
+              "selRmHPAawDFtEzPl": {
+                "color": "yellowMedium",
+                "name": "San Diego",
+                "id": "selRmHPAawDFtEzPl"
+              },
               "selfr7adlwlHnM6Xx": {
                 "color": "pinkDark",
                 "name": "Singapore",
                 "id": "selfr7adlwlHnM6Xx"
-              },
-              "sel8GpsCiYX4oM0Yl": {
-                "name": "Non-U.S.",
-                "color": "grayDarker",
-                "id": "sel8GpsCiYX4oM0Yl"
               },
               "selHO4Xi7UszSHcmc": {
                 "name": "Amsterdam",
@@ -273,11 +340,6 @@
                 "name": "London",
                 "id": "selnBHRWdTxvcfNCY"
               },
-              "selwgWRJpOwx2s1A9": {
-                "color": "orangeDark",
-                "name": "Bengaluru",
-                "id": "selwgWRJpOwx2s1A9"
-              },
               "selBXVN2jsIanV7bc": {
                 "color": "yellowDark",
                 "name": "Tampa Bay",
@@ -288,16 +350,6 @@
                 "name": "Phoenix",
                 "id": "selkAKjQgaDhIReia"
               },
-              "selUIARvta4ZrMQ4S": {
-                "color": "pinkMedium",
-                "name": "Seattle",
-                "id": "selUIARvta4ZrMQ4S"
-              },
-              "sel4xFmzIJcPrnGBs": {
-                "color": "orange",
-                "name": "Los Angeles",
-                "id": "sel4xFmzIJcPrnGBs"
-              },
               "selYIlx3TbTRjmgwo": {
                 "id": "selYIlx3TbTRjmgwo",
                 "name": "Seoul",
@@ -307,11 +359,6 @@
                 "id": "selW4JTVnIjx9U7ne",
                 "name": "Kansas City",
                 "color": "tealDarker"
-              },
-              "selaY0t9IlOz71lPt": {
-                "color": "cyan",
-                "name": "New York City",
-                "id": "selaY0t9IlOz71lPt"
               },
               "selFS1Swg3gzJEQZA": {
                 "color": "grayMedium",
@@ -453,11 +500,6 @@
                 "name": "Tel Aviv",
                 "id": "sel0J06wr01JGpsFy"
               },
-              "selRmHPAawDFtEzPl": {
-                "color": "yellowMedium",
-                "name": "San Diego",
-                "id": "selRmHPAawDFtEzPl"
-              },
               "sel1prhJRTfHjJ4ov": {
                 "id": "sel1prhJRTfHjJ4ov",
                 "name": "Indianapolis",
@@ -523,11 +565,6 @@
                 "name": "Noida",
                 "id": "selYWIFy2zbpexk1I"
               },
-              "selSMGjYDL3JsHfVa": {
-                "color": "greenDark",
-                "name": "Montreal",
-                "id": "selSMGjYDL3JsHfVa"
-              },
               "sel1JO3CBheVBVjsw": {
                 "color": "cyanMedium",
                 "name": "Chennai",
@@ -557,11 +594,6 @@
                 "id": "selxZ786hHsYfggLY",
                 "name": "Cincinnati",
                 "color": "orange"
-              },
-              "selTu0xn10SaLljFb": {
-                "color": "pinkDarker",
-                "name": "Lagos",
-                "id": "selTu0xn10SaLljFb"
               },
               "selpNCgF9V8a6Ix66": {
                 "id": "selpNCgF9V8a6Ix66",
@@ -642,11 +674,6 @@
                 "id": "selUuwGJduRp56mJ3",
                 "name": "Dublin",
                 "color": "cyanMedium"
-              },
-              "selh1UXiAoacwyW34": {
-                "color": "yellow",
-                "name": "Toronto",
-                "id": "selh1UXiAoacwyW34"
               },
               "sel5hPw427BgUgiey": {
                 "color": "cyanDark",
@@ -733,11 +760,6 @@
                 "name": "Zurich",
                 "id": "selkcQTVBKqmevtXP"
               },
-              "selulLRA47dkdEV1m": {
-                "id": "selulLRA47dkdEV1m",
-                "name": "Boise",
-                "color": "greenDarker"
-              },
               "selhsfpkdho8tlTCX": {
                 "id": "selhsfpkdho8tlTCX",
                 "name": "Baton Rouge",
@@ -803,11 +825,6 @@
                 "name": "Helsinki",
                 "color": "cyanDark"
               },
-              "selEHIWQ5r9QoerEQ": {
-                "color": "cyanDarker",
-                "name": "Detroit",
-                "id": "selEHIWQ5r9QoerEQ"
-              },
               "selCcHevQObi36t9x": {
                 "id": "selCcHevQObi36t9x",
                 "name": "Frankfurt",
@@ -862,11 +879,6 @@
                 "color": "greenDark",
                 "name": "Nashville",
                 "id": "selRS2krEQoVHbijZ"
-              },
-              "seleheU73ufD0GKoU": {
-                "color": "grayMedium",
-                "name": "Mexico City",
-                "id": "seleheU73ufD0GKoU"
               },
               "selgHuVrUcuEEmZ7o": {
                 "id": "selgHuVrUcuEEmZ7o",
@@ -1324,7 +1336,7 @@
           "default": null,
           "initialCreatedTime": null,
           "initialCreatedByUserId": null,
-          "lastModifiedTime": "2023-06-22T00:18:29.000Z",
+          "lastModifiedTime": "2023-07-01T00:57:06.000Z",
           "lastModifiedByUserId": "usrtulMhWma18ahwl",
           "isEditableFromSync": false
         },
@@ -1417,60 +1429,90 @@
               "selDTlcyuhGj5Mm5P"
             ],
             "choices": {
-              "selBvC3A4HNUDzerT": {
-                "id": "selBvC3A4HNUDzerT",
-                "name": "Transportation",
-                "color": "orange"
-              },
-              "selEKQtgEMWOMn8TL": {
-                "id": "selEKQtgEMWOMn8TL",
-                "name": "Healthcare",
-                "color": "greenDarker"
-              },
-              "selH1E4idyZIfawzb": {
-                "id": "selH1E4idyZIfawzb",
-                "name": "Marketing",
-                "color": "green"
-              },
-              "sel0UCZcPOcDjGani": {
-                "id": "sel0UCZcPOcDjGani",
-                "name": "Food",
-                "color": "cyanMedium"
-              },
-              "selth9glSexLf6qnI": {
-                "id": "selth9glSexLf6qnI",
-                "name": "Media",
-                "color": "blueMedium"
-              },
-              "selZq6RloLnGETcqq": {
-                "id": "selZq6RloLnGETcqq",
-                "name": "HR",
-                "color": "teal"
+              "seltnKQZX77Ly2vV1": {
+                "id": "seltnKQZX77Ly2vV1",
+                "name": "Consumer",
+                "color": "cyanDarker"
               },
               "selGR2BmxhGCFrgxa": {
                 "id": "selGR2BmxhGCFrgxa",
                 "name": "Retail",
                 "color": "cyan"
               },
+              "selH1E4idyZIfawzb": {
+                "id": "selH1E4idyZIfawzb",
+                "name": "Marketing",
+                "color": "green"
+              },
+              "selFbYcvIJ3UEiwsU": {
+                "id": "selFbYcvIJ3UEiwsU",
+                "name": "Other",
+                "color": "purple"
+              },
+              "selEKQtgEMWOMn8TL": {
+                "id": "selEKQtgEMWOMn8TL",
+                "name": "Healthcare",
+                "color": "greenDarker"
+              },
               "selLJkLp5cw09tKhF": {
                 "id": "selLJkLp5cw09tKhF",
                 "name": "Crypto",
                 "color": "redMedium"
               },
-              "sel6OGZcQaNaIy01j": {
-                "id": "sel6OGZcQaNaIy01j",
-                "name": "Education",
+              "selth9glSexLf6qnI": {
+                "id": "selth9glSexLf6qnI",
+                "name": "Media",
                 "color": "blueMedium"
-              },
-              "seltnKQZX77Ly2vV1": {
-                "id": "seltnKQZX77Ly2vV1",
-                "name": "Consumer",
-                "color": "cyanDarker"
               },
               "seluHafT4M09jrLuo": {
                 "id": "seluHafT4M09jrLuo",
                 "name": "Finance",
                 "color": "pinkDarker"
+              },
+              "selZq6RloLnGETcqq": {
+                "id": "selZq6RloLnGETcqq",
+                "name": "HR",
+                "color": "teal"
+              },
+              "selFxq25Dm3AiLyDz": {
+                "id": "selFxq25Dm3AiLyDz",
+                "name": "Infrastructure",
+                "color": "cyan"
+              },
+              "selIDIRy3TsJWg2Hw": {
+                "id": "selIDIRy3TsJWg2Hw",
+                "name": "Energy",
+                "color": "yellowMedium"
+              },
+              "selgmaGYdzpDjso0S": {
+                "id": "selgmaGYdzpDjso0S",
+                "name": "Sales",
+                "color": "purple"
+              },
+              "selBvC3A4HNUDzerT": {
+                "id": "selBvC3A4HNUDzerT",
+                "name": "Transportation",
+                "color": "orange"
+              },
+              "sel12QiTzll3a924S": {
+                "id": "sel12QiTzll3a924S",
+                "name": "Logistics",
+                "color": "grayDark"
+              },
+              "selLlU54UP8VJK3F0": {
+                "id": "selLlU54UP8VJK3F0",
+                "name": "Recruiting",
+                "color": "redMedium"
+              },
+              "sel0UCZcPOcDjGani": {
+                "id": "sel0UCZcPOcDjGani",
+                "name": "Food",
+                "color": "cyanMedium"
+              },
+              "sel6OGZcQaNaIy01j": {
+                "id": "sel6OGZcQaNaIy01j",
+                "name": "Education",
+                "color": "blueMedium"
               },
               "selOiyle68RTVF1rX": {
                 "id": "selOiyle68RTVF1rX",
@@ -1481,11 +1523,6 @@
                 "id": "sellei4bVXrR2MBVT",
                 "name": "Product",
                 "color": "purpleDark"
-              },
-              "selgmaGYdzpDjso0S": {
-                "id": "selgmaGYdzpDjso0S",
-                "name": "Sales",
-                "color": "purple"
               },
               "selJ5p8SNsaywXI2a": {
                 "id": "selJ5p8SNsaywXI2a",
@@ -1502,11 +1539,6 @@
                 "name": "Real Estate",
                 "color": "gray"
               },
-              "selFxq25Dm3AiLyDz": {
-                "id": "selFxq25Dm3AiLyDz",
-                "name": "Infrastructure",
-                "color": "cyan"
-              },
               "sel94XAwoOXoBVrXT": {
                 "id": "sel94XAwoOXoBVrXT",
                 "name": "Aerospace",
@@ -1516,21 +1548,6 @@
                 "id": "selDTlcyuhGj5Mm5P",
                 "name": "Manufacturing",
                 "color": "blueDark"
-              },
-              "selFbYcvIJ3UEiwsU": {
-                "id": "selFbYcvIJ3UEiwsU",
-                "name": "Other",
-                "color": "purple"
-              },
-              "sel12QiTzll3a924S": {
-                "id": "sel12QiTzll3a924S",
-                "name": "Logistics",
-                "color": "grayDark"
-              },
-              "selLlU54UP8VJK3F0": {
-                "id": "selLlU54UP8VJK3F0",
-                "name": "Recruiting",
-                "color": "redMedium"
               },
               "sel1MYDovcsOJmhve": {
                 "id": "sel1MYDovcsOJmhve",
@@ -1551,11 +1568,6 @@
                 "id": "selzloZUZOs09CccK",
                 "name": "Construction",
                 "color": "purpleDark"
-              },
-              "selIDIRy3TsJWg2Hw": {
-                "id": "selIDIRy3TsJWg2Hw",
-                "name": "Energy",
-                "color": "yellowMedium"
               },
               "selDps8pgne4LS3uv": {
                 "id": "selDps8pgne4LS3uv",
@@ -1627,40 +1639,25 @@
               "selwHTygmCHsMHTWb"
             ],
             "choices": {
-              "sela5OuwQcXOkl5WO": {
-                "name": "Post-IPO",
-                "color": "gray",
-                "id": "sela5OuwQcXOkl5WO"
-              },
-              "selMtMt50lh0N7WgR": {
-                "name": "Private Equity",
-                "color": "greenMedium",
-                "id": "selMtMt50lh0N7WgR"
-              },
-              "selEPnLyx1vpTXoMi": {
-                "name": "Acquired",
-                "color": "blueMedium",
-                "id": "selEPnLyx1vpTXoMi"
+              "seljXqXvNGlbMKwqs": {
+                "name": "Series A",
+                "color": "cyan",
+                "id": "seljXqXvNGlbMKwqs"
               },
               "selRkNOUKADWhjDVg": {
                 "name": "Unknown",
                 "color": "cyanMedium",
                 "id": "selRkNOUKADWhjDVg"
               },
-              "selCjvAwzOBfTt3H6": {
-                "color": "blue",
-                "name": "Seed",
-                "id": "selCjvAwzOBfTt3H6"
+              "selMtMt50lh0N7WgR": {
+                "name": "Private Equity",
+                "color": "greenMedium",
+                "id": "selMtMt50lh0N7WgR"
               },
-              "selhbTFdjQu6C1iVA": {
-                "name": "Series C",
-                "color": "green",
-                "id": "selhbTFdjQu6C1iVA"
-              },
-              "seljXqXvNGlbMKwqs": {
-                "name": "Series A",
-                "color": "cyan",
-                "id": "seljXqXvNGlbMKwqs"
+              "selYp4s2HFiTwEy8H": {
+                "name": "Series D",
+                "color": "yellow",
+                "id": "selYp4s2HFiTwEy8H"
               },
               "selwHTygmCHsMHTWb": {
                 "id": "selwHTygmCHsMHTWb",
@@ -1672,25 +1669,45 @@
                 "color": "teal",
                 "id": "selyuez0zsiQ9x0TG"
               },
-              "selTTLiP40O6dniJZ": {
-                "name": "Series F",
-                "color": "red",
-                "id": "selTTLiP40O6dniJZ"
+              "selB7qqWLHLqEtTJl": {
+                "color": "orangeDark",
+                "name": "Series I",
+                "id": "selB7qqWLHLqEtTJl"
               },
-              "selxX017D0jzUaIEL": {
-                "name": "Series G",
-                "color": "pink",
-                "id": "selxX017D0jzUaIEL"
+              "selEPnLyx1vpTXoMi": {
+                "name": "Acquired",
+                "color": "blueMedium",
+                "id": "selEPnLyx1vpTXoMi"
+              },
+              "selCjvAwzOBfTt3H6": {
+                "color": "blue",
+                "name": "Seed",
+                "id": "selCjvAwzOBfTt3H6"
+              },
+              "sela5OuwQcXOkl5WO": {
+                "name": "Post-IPO",
+                "color": "gray",
+                "id": "sela5OuwQcXOkl5WO"
+              },
+              "selhbTFdjQu6C1iVA": {
+                "name": "Series C",
+                "color": "green",
+                "id": "selhbTFdjQu6C1iVA"
               },
               "selYrHZ7XxiUWzx3q": {
                 "name": "Series E",
                 "color": "orange",
                 "id": "selYrHZ7XxiUWzx3q"
               },
-              "selYp4s2HFiTwEy8H": {
-                "name": "Series D",
-                "color": "yellow",
-                "id": "selYp4s2HFiTwEy8H"
+              "selxX017D0jzUaIEL": {
+                "name": "Series G",
+                "color": "pink",
+                "id": "selxX017D0jzUaIEL"
+              },
+              "selTTLiP40O6dniJZ": {
+                "name": "Series F",
+                "color": "red",
+                "id": "selTTLiP40O6dniJZ"
               },
               "selarzb6T8byNOkth": {
                 "name": "Series H",
@@ -1701,11 +1718,6 @@
                 "color": "teal",
                 "name": "Series J",
                 "id": "selOiU3nTXt3nE1Su"
-              },
-              "selB7qqWLHLqEtTJl": {
-                "color": "orangeDark",
-                "name": "Series I",
-                "id": "selB7qqWLHLqEtTJl"
               }
             },
             "disableColors": false
@@ -1812,6 +1824,36 @@
                 "name": "United States",
                 "id": "seldVNXmT64IJdbP2"
               },
+              "selXARwGJXy8DB6KI": {
+                "color": "blue",
+                "name": "India",
+                "id": "selXARwGJXy8DB6KI"
+              },
+              "selIHQDFHkz6h1wsn": {
+                "color": "greenMedium",
+                "name": "Israel",
+                "id": "selIHQDFHkz6h1wsn"
+              },
+              "sel4QYt6j6liXmYR0": {
+                "color": "pinkMedium",
+                "name": "Mexico",
+                "id": "sel4QYt6j6liXmYR0"
+              },
+              "selSJ99R9vMU9Hob8": {
+                "id": "selSJ99R9vMU9Hob8",
+                "name": "Norway",
+                "color": "blueDark"
+              },
+              "selMxhJMR9fiMuPK3": {
+                "color": "pink",
+                "name": "Nigeria",
+                "id": "selMxhJMR9fiMuPK3"
+              },
+              "selM7Gdl5vwqTgibq": {
+                "color": "yellow",
+                "name": "Canada",
+                "id": "selM7Gdl5vwqTgibq"
+              },
               "selBAxdcijcoRyNRQ": {
                 "color": "teal",
                 "name": "Singapore",
@@ -1826,11 +1868,6 @@
                 "color": "yellowMedium",
                 "name": "United Kingdom",
                 "id": "sel5OzJCT8kst6x2A"
-              },
-              "selXARwGJXy8DB6KI": {
-                "color": "blue",
-                "name": "India",
-                "id": "selXARwGJXy8DB6KI"
               },
               "selevEOEKGQMOhnQY": {
                 "id": "selevEOEKGQMOhnQY",
@@ -1862,11 +1899,6 @@
                 "name": "Germany",
                 "id": "selLDlpyPTmfVZzh7"
               },
-              "selIHQDFHkz6h1wsn": {
-                "color": "greenMedium",
-                "name": "Israel",
-                "id": "selIHQDFHkz6h1wsn"
-              },
               "selvTkxmOdwtMVOUq": {
                 "color": "grayMedium",
                 "name": "China",
@@ -1886,11 +1918,6 @@
                 "id": "selelWheTzgDaVmyq",
                 "name": "Chile",
                 "color": "greenMedium"
-              },
-              "selM7Gdl5vwqTgibq": {
-                "color": "yellow",
-                "name": "Canada",
-                "id": "selM7Gdl5vwqTgibq"
               },
               "selaSrPDjnRuzWkhV": {
                 "color": "redMedium",
@@ -1912,11 +1939,6 @@
                 "name": "Philippines",
                 "color": "blueDarker"
               },
-              "selMxhJMR9fiMuPK3": {
-                "color": "pink",
-                "name": "Nigeria",
-                "id": "selMxhJMR9fiMuPK3"
-              },
               "selZki0nPRMVY9BJh": {
                 "id": "selZki0nPRMVY9BJh",
                 "name": "New Zealand",
@@ -1926,11 +1948,6 @@
                 "id": "sel0PPlkcLX7UEoNf",
                 "name": "Spain",
                 "color": "blueDark"
-              },
-              "sel4QYt6j6liXmYR0": {
-                "color": "pinkMedium",
-                "name": "Mexico",
-                "id": "sel4QYt6j6liXmYR0"
               },
               "selEcRpWaXioGtLDu": {
                 "color": "yellowMedium",
@@ -2006,11 +2023,6 @@
                 "id": "selFv63BE2ZmwELFS",
                 "name": "Greece",
                 "color": "cyanMedium"
-              },
-              "selSJ99R9vMU9Hob8": {
-                "id": "selSJ99R9vMU9Hob8",
-                "name": "Norway",
-                "color": "blueDark"
               },
               "selwJb2YkTZSBefxX": {
                 "id": "selwJb2YkTZSBefxX",
@@ -2308,11 +2320,143 @@
           ],
           "rowOrder": [
             {
+              "rowId": "rec0XEKZ07OHJDxQZ",
+              "visibility": true
+            },
+            {
+              "rowId": "rec60rBOE1tRWAAQX",
+              "visibility": true
+            },
+            {
+              "rowId": "recm6MwYDpAfh6P5Z",
+              "visibility": true
+            },
+            {
+              "rowId": "rec4joRZxafa63noN",
+              "visibility": true
+            },
+            {
+              "rowId": "reczAqCzSqKoz1gic",
+              "visibility": true
+            },
+            {
+              "rowId": "recGdahcPMyLHnuNg",
+              "visibility": true
+            },
+            {
+              "rowId": "recRhnhNAkCVkTWo6",
+              "visibility": true
+            },
+            {
+              "rowId": "recp859FHDeipMEb7",
+              "visibility": true
+            },
+            {
+              "rowId": "recFHOU4qQwFjttDm",
+              "visibility": true
+            },
+            {
+              "rowId": "recBbWrDZjzDNsaqn",
+              "visibility": true
+            },
+            {
+              "rowId": "rec1amCVV0WSX4UUD",
+              "visibility": true
+            },
+            {
+              "rowId": "recYNvKVyofrUNUFC",
+              "visibility": true
+            },
+            {
+              "rowId": "rectDZtnsd9o4HDVc",
+              "visibility": true
+            },
+            {
+              "rowId": "recJiyckyUdvUdYA5",
+              "visibility": true
+            },
+            {
+              "rowId": "recnyTg1ufVnXyu2H",
+              "visibility": true
+            },
+            {
+              "rowId": "recqIXCOQX9f6UhO9",
+              "visibility": true
+            },
+            {
+              "rowId": "recIW1HUiPj2vahN6",
+              "visibility": true
+            },
+            {
+              "rowId": "recO2Isz35oD5nEAT",
+              "visibility": true
+            },
+            {
+              "rowId": "reclHO9FBHYmAzbwY",
+              "visibility": true
+            },
+            {
+              "rowId": "recxs8KS52RUi6I1H",
+              "visibility": true
+            },
+            {
+              "rowId": "recvvxtBUWsu5NjMH",
+              "visibility": true
+            },
+            {
+              "rowId": "recA5C5u6OOmSLw6n",
+              "visibility": true
+            },
+            {
+              "rowId": "recMKMTrLLSLhJfp8",
+              "visibility": true
+            },
+            {
+              "rowId": "recRimW7VqRMLCCbt",
+              "visibility": true
+            },
+            {
+              "rowId": "recRMNuw0IXKHHCfd",
+              "visibility": true
+            },
+            {
+              "rowId": "recxMidcM7YPYHmGl",
+              "visibility": true
+            },
+            {
+              "rowId": "recVWwCbPkUP377b0",
+              "visibility": true
+            },
+            {
+              "rowId": "rechzd97DpV86iw5A",
+              "visibility": true
+            },
+            {
+              "rowId": "recdX6l1kSIbO9iUy",
+              "visibility": true
+            },
+            {
+              "rowId": "recGyH4JAXxV3b8ZT",
+              "visibility": true
+            },
+            {
               "rowId": "recnjK8075T9xnImr",
               "visibility": true
             },
             {
+              "rowId": "rechFrZJJnC9Hq0Yq",
+              "visibility": true
+            },
+            {
+              "rowId": "recYhGZeWqnKBYMmJ",
+              "visibility": true
+            },
+            {
               "rowId": "recC4vnQrPlWFcYXN",
+              "visibility": true
+            },
+            {
+              "rowId": "recRIFuEOQsPZ80mS",
               "visibility": true
             },
             {
@@ -2345,6 +2489,10 @@
             },
             {
               "rowId": "recP6Jos0bv6ZTTJd",
+              "visibility": true
+            },
+            {
+              "rowId": "recxmdONYTraOe77r",
               "visibility": true
             },
             {
@@ -2408,6 +2556,10 @@
               "visibility": true
             },
             {
+              "rowId": "reciufMTmNXjs0j2S",
+              "visibility": true
+            },
+            {
               "rowId": "recGP22fuGLI0o9tU",
               "visibility": true
             },
@@ -2417,10 +2569,6 @@
             },
             {
               "rowId": "recvM6exxM9d4uUMg",
-              "visibility": true
-            },
-            {
-              "rowId": "reciufMTmNXjs0j2S",
               "visibility": true
             },
             {
@@ -2477,6 +2625,10 @@
             },
             {
               "rowId": "recnipYmnLwaCfarT",
+              "visibility": true
+            },
+            {
+              "rowId": "recPhaEws2ptD5zyH",
               "visibility": true
             },
             {
@@ -13274,6 +13426,554 @@
       },
       "rows": [
         {
+          "id": "rec0XEKZ07OHJDxQZ",
+          "createdTime": "2023-07-01T00:57:52.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Buzzer",
+            "fld1mbRJlknicV1Dk": [
+              "selaY0t9IlOz71lPt"
+            ],
+            "fldMvtAoxHCri39uZ": "seltnKQZX77Ly2vV1",
+            "fldMPQjXwImpjkDqb": 1,
+            "fldXPv4gHmcbxvQRi": "2023-06-30T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://frontofficesports.com/buzzer-the-gen-z-sports-app-backed-by-44-million-shuts-down/",
+            "fld5Rl99rerd8qYDZ": 24,
+            "fldbWCltYdMzywX2v": "seljXqXvNGlbMKwqs",
+            "fldjEGNXkyOJSP4ZM": "2023-07-01T00:57:52.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "rec60rBOE1tRWAAQX",
+          "createdTime": "2023-07-01T00:58:52.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Lunya",
+            "fld1mbRJlknicV1Dk": [
+              "sel4xFmzIJcPrnGBs"
+            ],
+            "fldMvtAoxHCri39uZ": "selGR2BmxhGCFrgxa",
+            "fldMPQjXwImpjkDqb": 1,
+            "fldXPv4gHmcbxvQRi": "2023-06-30T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.modernretail.co/operations/dtc-sleepwear-startup-lunya-has-filed-for-chapter-11-bankruptcy/",
+            "fldbWCltYdMzywX2v": "selRkNOUKADWhjDVg",
+            "fldjEGNXkyOJSP4ZM": "2023-07-01T00:58:52.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recm6MwYDpAfh6P5Z",
+          "createdTime": "2023-07-01T15:49:19.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "MediaMath",
+            "fld1mbRJlknicV1Dk": [
+              "selaY0t9IlOz71lPt"
+            ],
+            "fldMvtAoxHCri39uZ": "selH1E4idyZIfawzb",
+            "fldMPQjXwImpjkDqb": 1,
+            "fldXPv4gHmcbxvQRi": "2023-06-30T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.adexchanger.com/online-advertising/mediamath-files-for-bankruptcy-after-acquisition-talks-fall-apart/",
+            "fld5Rl99rerd8qYDZ": 607,
+            "fldbWCltYdMzywX2v": "selMtMt50lh0N7WgR",
+            "fldjEGNXkyOJSP4ZM": "2023-07-01T15:49:19.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "rec4joRZxafa63noN",
+          "createdTime": "2023-06-29T19:14:00.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Niantic",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "selFbYcvIJ3UEiwsU",
+            "flduZSpdFqkB4eeEh": 230,
+            "fldXPv4gHmcbxvQRi": "2023-06-29T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.cnbc.com/2023/06/29/pokemon-go-maker-niantic-lays-off-230-employees-cancels-games-.html",
+            "fld5Rl99rerd8qYDZ": 770,
+            "fldbWCltYdMzywX2v": "selYp4s2HFiTwEy8H",
+            "fldjEGNXkyOJSP4ZM": "2023-06-29T19:14:00.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "reczAqCzSqKoz1gic",
+          "createdTime": "2023-06-30T15:05:37.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Headspace",
+            "fld1mbRJlknicV1Dk": [
+              "sel4xFmzIJcPrnGBs"
+            ],
+            "fldMvtAoxHCri39uZ": "selEKQtgEMWOMn8TL",
+            "flduZSpdFqkB4eeEh": 181,
+            "fldMPQjXwImpjkDqb": 0.15,
+            "fldXPv4gHmcbxvQRi": "2023-06-29T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.latimes.com/business/story/2023-06-29/headspace-meditation-app-lays-off-15-of-employees",
+            "fld5Rl99rerd8qYDZ": 216,
+            "fldbWCltYdMzywX2v": "selRkNOUKADWhjDVg",
+            "fldjEGNXkyOJSP4ZM": "2023-06-30T15:05:37.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recGdahcPMyLHnuNg",
+          "createdTime": "2023-06-30T14:55:57.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Artsy",
+            "fld1mbRJlknicV1Dk": [
+              "selaY0t9IlOz71lPt"
+            ],
+            "fldMvtAoxHCri39uZ": "selGR2BmxhGCFrgxa",
+            "flduZSpdFqkB4eeEh": 35,
+            "fldMPQjXwImpjkDqb": 0.15,
+            "fldXPv4gHmcbxvQRi": "2023-06-29T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.artnews.com/art-news/news/artsy-lays-off-35-employees-across-divisions-1234672920/",
+            "fld5Rl99rerd8qYDZ": 100,
+            "fldbWCltYdMzywX2v": "selYp4s2HFiTwEy8H",
+            "fldjEGNXkyOJSP4ZM": "2023-06-30T14:55:57.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recRhnhNAkCVkTWo6",
+          "createdTime": "2023-06-30T14:57:01.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Candy Digital",
+            "fld1mbRJlknicV1Dk": [
+              "selaY0t9IlOz71lPt"
+            ],
+            "fldMvtAoxHCri39uZ": "selLJkLp5cw09tKhF",
+            "flduZSpdFqkB4eeEh": 30,
+            "fldXPv4gHmcbxvQRi": "2023-06-29T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://decrypt.co/146734/candy-digital-confirms-layoffs-reveals-merger-palm-nft-studio",
+            "fld5Rl99rerd8qYDZ": 138,
+            "fldbWCltYdMzywX2v": "seljXqXvNGlbMKwqs",
+            "fldjEGNXkyOJSP4ZM": "2023-06-30T14:57:01.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recp859FHDeipMEb7",
+          "createdTime": "2023-06-30T15:00:28.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Xiaomi India",
+            "fld1mbRJlknicV1Dk": [
+              "selwgWRJpOwx2s1A9",
+              "sel8GpsCiYX4oM0Yl"
+            ],
+            "fldMvtAoxHCri39uZ": "selFbYcvIJ3UEiwsU",
+            "flduZSpdFqkB4eeEh": 30,
+            "fldXPv4gHmcbxvQRi": "2023-06-29T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://economictimes.indiatimes.com/industry/cons-products/electronics/xiaomi-india-to-rejig-operations-bring-headcount-to-below-1000/articleshow/101347837.cms?from=mdr",
+            "fldbWCltYdMzywX2v": "selwHTygmCHsMHTWb",
+            "fldjEGNXkyOJSP4ZM": "2023-06-30T15:00:28.000Z",
+            "fldnR6AcR7HjRtwrG": "selXARwGJXy8DB6KI"
+          }
+        },
+        {
+          "id": "recFHOU4qQwFjttDm",
+          "createdTime": "2023-07-01T00:57:04.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Torii",
+            "fld1mbRJlknicV1Dk": [
+              "selF1QVyJ96sezHrK",
+              "sel8GpsCiYX4oM0Yl"
+            ],
+            "fldMvtAoxHCri39uZ": "selFbYcvIJ3UEiwsU",
+            "flduZSpdFqkB4eeEh": 28,
+            "fldMPQjXwImpjkDqb": 0.3,
+            "fldXPv4gHmcbxvQRi": "2023-06-29T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.calcalistech.com/ctechnews/article/hjqdc1i00h",
+            "fld5Rl99rerd8qYDZ": 65,
+            "fldbWCltYdMzywX2v": "selyuez0zsiQ9x0TG",
+            "fldjEGNXkyOJSP4ZM": "2023-07-01T00:57:04.000Z",
+            "fldnR6AcR7HjRtwrG": "selIHQDFHkz6h1wsn"
+          }
+        },
+        {
+          "id": "recBbWrDZjzDNsaqn",
+          "createdTime": "2023-06-30T16:22:06.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Insider Intelligence",
+            "fld1mbRJlknicV1Dk": [
+              "selaY0t9IlOz71lPt"
+            ],
+            "fldMvtAoxHCri39uZ": "selth9glSexLf6qnI",
+            "flduZSpdFqkB4eeEh": 20,
+            "fldXPv4gHmcbxvQRi": "2023-06-29T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.theinformation.com/briefings/insider-intelligence-to-lay-off-20-outsource-to-philippines",
+            "fldbWCltYdMzywX2v": "selwHTygmCHsMHTWb",
+            "fldjEGNXkyOJSP4ZM": "2023-06-30T16:22:06.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "rec1amCVV0WSX4UUD",
+          "createdTime": "2023-07-01T00:56:04.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Merama",
+            "fld1mbRJlknicV1Dk": [
+              "seleheU73ufD0GKoU",
+              "sel8GpsCiYX4oM0Yl"
+            ],
+            "fldMvtAoxHCri39uZ": "selGR2BmxhGCFrgxa",
+            "fldMPQjXwImpjkDqb": 0.1,
+            "fldXPv4gHmcbxvQRi": "2023-06-29T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.reuters.com/technology/latam-unicorn-merama-cuts-nearly-10-staff-amid-strategy-refocus-2023-06-29/",
+            "fld5Rl99rerd8qYDZ": 445,
+            "fldbWCltYdMzywX2v": "selyuez0zsiQ9x0TG",
+            "fldjEGNXkyOJSP4ZM": "2023-07-01T00:56:04.000Z",
+            "fldnR6AcR7HjRtwrG": "sel4QYt6j6liXmYR0"
+          }
+        },
+        {
+          "id": "recYNvKVyofrUNUFC",
+          "createdTime": "2023-06-30T15:04:39.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Stripe",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "seluHafT4M09jrLuo",
+            "fldXPv4gHmcbxvQRi": "2023-06-29T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.theinformation.com/articles/stripe-lays-off-dozens-mostly-in-recruiting",
+            "fld5Rl99rerd8qYDZ": 8700,
+            "fldbWCltYdMzywX2v": "selB7qqWLHLqEtTJl",
+            "fldjEGNXkyOJSP4ZM": "2023-06-30T15:04:39.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "rectDZtnsd9o4HDVc",
+          "createdTime": "2023-06-30T15:09:22.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Vowel",
+            "fld1mbRJlknicV1Dk": [
+              "selaY0t9IlOz71lPt"
+            ],
+            "fldMvtAoxHCri39uZ": "selFbYcvIJ3UEiwsU",
+            "fldMPQjXwImpjkDqb": 0.1,
+            "fldXPv4gHmcbxvQRi": "2023-06-29T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://twitter.com/berman66/status/1674552743858511873?s=46&t=gjICOYvLX7vrlS7ffAtQoA",
+            "fld5Rl99rerd8qYDZ": 18,
+            "fldbWCltYdMzywX2v": "seljXqXvNGlbMKwqs",
+            "fldjEGNXkyOJSP4ZM": "2023-06-30T15:09:22.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recJiyckyUdvUdYA5",
+          "createdTime": "2023-06-30T14:57:57.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Ludia",
+            "fld1mbRJlknicV1Dk": [
+              "selSMGjYDL3JsHfVa",
+              "sel8GpsCiYX4oM0Yl"
+            ],
+            "fldMvtAoxHCri39uZ": "seltnKQZX77Ly2vV1",
+            "flduZSpdFqkB4eeEh": 55,
+            "fldXPv4gHmcbxvQRi": "2023-06-28T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://mobilegamer.biz/up-to-55-staff-laid-off-at-jurassic-world-alive-maker-ludia/",
+            "fld5Rl99rerd8qYDZ": 1,
+            "fldbWCltYdMzywX2v": "selEPnLyx1vpTXoMi",
+            "fldjEGNXkyOJSP4ZM": "2023-06-30T14:57:57.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recnyTg1ufVnXyu2H",
+          "createdTime": "2023-06-30T14:59:42.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Karat",
+            "fld1mbRJlknicV1Dk": [
+              "selUIARvta4ZrMQ4S"
+            ],
+            "fldMvtAoxHCri39uZ": "selZq6RloLnGETcqq",
+            "flduZSpdFqkB4eeEh": 47,
+            "fldXPv4gHmcbxvQRi": "2023-06-28T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.geekwire.com/2023/technical-recruiting-startup-karat-lays-off-47-employees-for-the-second-time-this-year/",
+            "fld5Rl99rerd8qYDZ": 169,
+            "fldbWCltYdMzywX2v": "selRkNOUKADWhjDVg",
+            "fldjEGNXkyOJSP4ZM": "2023-06-30T14:59:42.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recqIXCOQX9f6UhO9",
+          "createdTime": "2023-06-28T22:36:59.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Plex",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "selth9glSexLf6qnI",
+            "flduZSpdFqkB4eeEh": 37,
+            "fldMPQjXwImpjkDqb": 0.2,
+            "fldXPv4gHmcbxvQRi": "2023-06-28T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.theverge.com/2023/6/28/23777418/plex-layoffs-20-percent-staff",
+            "fld5Rl99rerd8qYDZ": 81,
+            "fldbWCltYdMzywX2v": "selRkNOUKADWhjDVg",
+            "fldjEGNXkyOJSP4ZM": "2023-06-28T22:36:59.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recIW1HUiPj2vahN6",
+          "createdTime": "2023-06-28T15:16:27.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Zapier",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "selFbYcvIJ3UEiwsU",
+            "fldMPQjXwImpjkDqb": 0.1,
+            "fldXPv4gHmcbxvQRi": "2023-06-28T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://zapier.com/blog/changes-at-zapier/",
+            "fld5Rl99rerd8qYDZ": 1,
+            "fldbWCltYdMzywX2v": "selCjvAwzOBfTt3H6",
+            "fldjEGNXkyOJSP4ZM": "2023-06-28T15:16:27.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recO2Isz35oD5nEAT",
+          "createdTime": "2023-06-27T18:12:56.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "New Relic",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "selFxq25Dm3AiLyDz",
+            "flduZSpdFqkB4eeEh": 255,
+            "fldMPQjXwImpjkDqb": 0.1,
+            "fldXPv4gHmcbxvQRi": "2023-06-27T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.oregonlive.com/silicon-forest/2023/06/new-relic-will-lay-off-another-255-in-latest-restructuring.html",
+            "fld5Rl99rerd8qYDZ": 214,
+            "fldbWCltYdMzywX2v": "sela5OuwQcXOkl5WO",
+            "fldjEGNXkyOJSP4ZM": "2023-06-27T18:12:56.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "reclHO9FBHYmAzbwY",
+          "createdTime": "2023-06-27T15:56:51.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Tibber",
+            "fld1mbRJlknicV1Dk": [
+              "sely9MrB4M3UkiAH7",
+              "sel8GpsCiYX4oM0Yl"
+            ],
+            "fldMvtAoxHCri39uZ": "selIDIRy3TsJWg2Hw",
+            "flduZSpdFqkB4eeEh": 50,
+            "fldXPv4gHmcbxvQRi": "2023-06-27T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.shifter.no/nyheter/inntil-50-ma-ga-i-tibber/281838",
+            "fld5Rl99rerd8qYDZ": 181,
+            "fldbWCltYdMzywX2v": "selhbTFdjQu6C1iVA",
+            "fldjEGNXkyOJSP4ZM": "2023-06-27T15:56:51.000Z",
+            "fldnR6AcR7HjRtwrG": "selSJ99R9vMU9Hob8"
+          }
+        },
+        {
+          "id": "recxs8KS52RUi6I1H",
+          "createdTime": "2023-06-26T23:38:08.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Eyowo",
+            "fld1mbRJlknicV1Dk": [
+              "selTu0xn10SaLljFb",
+              "sel8GpsCiYX4oM0Yl"
+            ],
+            "fldMvtAoxHCri39uZ": "seluHafT4M09jrLuo",
+            "fldMPQjXwImpjkDqb": 1,
+            "fldXPv4gHmcbxvQRi": "2023-06-27T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://technext24.com/2023/06/26/eyowo-to-shutdown-operations-tomorrow/",
+            "fldbWCltYdMzywX2v": "selRkNOUKADWhjDVg",
+            "fldjEGNXkyOJSP4ZM": "2023-06-26T23:38:08.000Z",
+            "fldnR6AcR7HjRtwrG": "selMxhJMR9fiMuPK3"
+          }
+        },
+        {
+          "id": "recvvxtBUWsu5NjMH",
+          "createdTime": "2023-06-28T13:57:31.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Loopio",
+            "fld1mbRJlknicV1Dk": [
+              "selh1UXiAoacwyW34",
+              "sel8GpsCiYX4oM0Yl"
+            ],
+            "fldMvtAoxHCri39uZ": "selgmaGYdzpDjso0S",
+            "fldMPQjXwImpjkDqb": 0.09,
+            "fldXPv4gHmcbxvQRi": "2023-06-27T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.linkedin.com/feed/update/urn:li:activity:7079578026635636737/",
+            "fld5Rl99rerd8qYDZ": 263,
+            "fldbWCltYdMzywX2v": "selMtMt50lh0N7WgR",
+            "fldjEGNXkyOJSP4ZM": "2023-06-28T13:57:31.000Z",
+            "fldnR6AcR7HjRtwrG": "selM7Gdl5vwqTgibq"
+          }
+        },
+        {
+          "id": "recA5C5u6OOmSLw6n",
+          "createdTime": "2023-06-30T14:58:47.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Lordstown Motors",
+            "fld1mbRJlknicV1Dk": [
+              "selEHIWQ5r9QoerEQ"
+            ],
+            "fldMvtAoxHCri39uZ": "selBvC3A4HNUDzerT",
+            "fldMPQjXwImpjkDqb": 1,
+            "fldXPv4gHmcbxvQRi": "2023-06-27T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.cnn.com/2023/06/27/business/lordstown-motors-bankruptcy-foxconn-lawsuit-intl-hnk/index.html",
+            "fld5Rl99rerd8qYDZ": 1100,
+            "fldbWCltYdMzywX2v": "sela5OuwQcXOkl5WO",
+            "fldjEGNXkyOJSP4ZM": "2023-06-30T14:58:47.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recMKMTrLLSLhJfp8",
+          "createdTime": "2023-06-28T00:05:13.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Waze",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "selBvC3A4HNUDzerT",
+            "fldXPv4gHmcbxvQRi": "2023-06-27T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.cnbc.com/2023/06/27/google-cuts-jobs-at-waze-as-it-continues-to-merge-mapping-products.html",
+            "fld5Rl99rerd8qYDZ": 67,
+            "fldbWCltYdMzywX2v": "selEPnLyx1vpTXoMi",
+            "fldjEGNXkyOJSP4ZM": "2023-06-28T00:05:13.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recRimW7VqRMLCCbt",
+          "createdTime": "2023-06-27T15:53:17.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Payoneer",
+            "fld1mbRJlknicV1Dk": [
+              "selaY0t9IlOz71lPt"
+            ],
+            "fldMvtAoxHCri39uZ": "seluHafT4M09jrLuo",
+            "flduZSpdFqkB4eeEh": 200,
+            "fldMPQjXwImpjkDqb": 0.1,
+            "fldXPv4gHmcbxvQRi": "2023-06-26T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.calcalistech.com/ctechnews/article/sjctoolon",
+            "fldbWCltYdMzywX2v": "sela5OuwQcXOkl5WO",
+            "fldjEGNXkyOJSP4ZM": "2023-06-27T15:53:17.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recRMNuw0IXKHHCfd",
+          "createdTime": "2023-06-26T23:36:58.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Robinhood",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "seluHafT4M09jrLuo",
+            "flduZSpdFqkB4eeEh": 150,
+            "fldMPQjXwImpjkDqb": 0.07,
+            "fldXPv4gHmcbxvQRi": "2023-06-26T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.wsj.com/articles/robinhood-lays-off-about-7-of-its-full-time-employees-2111cb48",
+            "fld5Rl99rerd8qYDZ": 5600,
+            "fldbWCltYdMzywX2v": "sela5OuwQcXOkl5WO",
+            "fldjEGNXkyOJSP4ZM": "2023-06-26T23:36:58.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recxMidcM7YPYHmGl",
+          "createdTime": "2023-06-27T15:54:27.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Convoy",
+            "fld1mbRJlknicV1Dk": [
+              "selUIARvta4ZrMQ4S"
+            ],
+            "fldMvtAoxHCri39uZ": "sel12QiTzll3a924S",
+            "flduZSpdFqkB4eeEh": 30,
+            "fldMPQjXwImpjkDqb": 0.05,
+            "fldXPv4gHmcbxvQRi": "2023-06-26T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.geekwire.com/2023/trucking-marketplace-convoy-makes-more-layoffs-citing-customer-service-efficiency-gains/",
+            "fld5Rl99rerd8qYDZ": 1100,
+            "fldbWCltYdMzywX2v": "selYrHZ7XxiUWzx3q",
+            "fldjEGNXkyOJSP4ZM": "2023-06-27T15:54:27.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recVWwCbPkUP377b0",
+          "createdTime": "2023-06-27T15:51:38.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Joonko",
+            "fld1mbRJlknicV1Dk": [
+              "selaY0t9IlOz71lPt"
+            ],
+            "fldMvtAoxHCri39uZ": "selLlU54UP8VJK3F0",
+            "fldMPQjXwImpjkDqb": 1,
+            "fldXPv4gHmcbxvQRi": "2023-06-25T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.calcalistech.com/ctechnews/article/skf0iabdh",
+            "fld5Rl99rerd8qYDZ": 38,
+            "fldbWCltYdMzywX2v": "selyuez0zsiQ9x0TG",
+            "fldjEGNXkyOJSP4ZM": "2023-06-27T15:51:38.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "rechzd97DpV86iw5A",
+          "createdTime": "2023-06-25T23:04:16.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "IRL",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "seltnKQZX77Ly2vV1",
+            "fldMPQjXwImpjkDqb": 1,
+            "fldXPv4gHmcbxvQRi": "2023-06-23T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.theinformation.com/articles/social-app-irl-which-raised-200-million-shuts-down-after-ceo-misconduct-probe",
+            "fld5Rl99rerd8qYDZ": 197,
+            "fldbWCltYdMzywX2v": "selhbTFdjQu6C1iVA",
+            "fldjEGNXkyOJSP4ZM": "2023-06-25T23:04:16.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recdX6l1kSIbO9iUy",
+          "createdTime": "2023-06-22T14:23:40.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Retool",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "selFbYcvIJ3UEiwsU",
+            "fldMPQjXwImpjkDqb": 0.09,
+            "fldXPv4gHmcbxvQRi": "2023-06-22T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "Internal memo",
+            "fld5Rl99rerd8qYDZ": 141,
+            "fldbWCltYdMzywX2v": "selhbTFdjQu6C1iVA",
+            "fldjEGNXkyOJSP4ZM": "2023-06-22T14:23:40.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recGyH4JAXxV3b8ZT",
+          "createdTime": "2023-06-24T03:48:00.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Anaplan",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "selFbYcvIJ3UEiwsU",
+            "flduZSpdFqkB4eeEh": 300,
+            "fldXPv4gHmcbxvQRi": "2023-06-21T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://nypost.com/2023/06/23/software-giant-anaplan-begins-layoffs-after-thoma-bravos-10-4b-buyout-deal/",
+            "fld5Rl99rerd8qYDZ": 300,
+            "fldbWCltYdMzywX2v": "selEPnLyx1vpTXoMi",
+            "fldjEGNXkyOJSP4ZM": "2023-06-24T03:48:00.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
           "id": "recnjK8075T9xnImr",
           "createdTime": "2023-06-22T00:19:03.000Z",
           "cellValuesByColumnId": {
@@ -13292,6 +13992,45 @@
           }
         },
         {
+          "id": "rechFrZJJnC9Hq0Yq",
+          "createdTime": "2023-06-23T15:38:59.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Tackle.io",
+            "fld1mbRJlknicV1Dk": [
+              "selulLRA47dkdEV1m"
+            ],
+            "fldMvtAoxHCri39uZ": "selFxq25Dm3AiLyDz",
+            "flduZSpdFqkB4eeEh": 75,
+            "fldXPv4gHmcbxvQRi": "2023-06-21T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://tackle.io/blog/tackle-company-update/",
+            "fld1pOF72T7Dec2lY": "x",
+            "fld5Rl99rerd8qYDZ": 148,
+            "fldbWCltYdMzywX2v": "selhbTFdjQu6C1iVA",
+            "fldjEGNXkyOJSP4ZM": "2023-06-23T15:38:59.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recYhGZeWqnKBYMmJ",
+          "createdTime": "2023-06-24T20:53:29.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Ritual",
+            "fld1mbRJlknicV1Dk": [
+              "selh1UXiAoacwyW34",
+              "sel8GpsCiYX4oM0Yl"
+            ],
+            "fldMvtAoxHCri39uZ": "sel0UCZcPOcDjGani",
+            "flduZSpdFqkB4eeEh": 38,
+            "fldMPQjXwImpjkDqb": 0.4,
+            "fldXPv4gHmcbxvQRi": "2023-06-21T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.theglobeandmail.com/business/article-food-ordering-service-ritual-lays-off-nearly-half-of-employees/",
+            "fld5Rl99rerd8qYDZ": 134,
+            "fldbWCltYdMzywX2v": "selhbTFdjQu6C1iVA",
+            "fldjEGNXkyOJSP4ZM": "2023-06-24T20:53:29.000Z",
+            "fldnR6AcR7HjRtwrG": "selM7Gdl5vwqTgibq"
+          }
+        },
+        {
           "id": "recC4vnQrPlWFcYXN",
           "createdTime": "2023-06-22T00:18:22.000Z",
           "cellValuesByColumnId": {
@@ -13305,6 +14044,23 @@
             "fld5Rl99rerd8qYDZ": 306,
             "fldbWCltYdMzywX2v": "selMtMt50lh0N7WgR",
             "fldjEGNXkyOJSP4ZM": "2023-06-22T00:18:22.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recRIFuEOQsPZ80mS",
+          "createdTime": "2023-06-27T22:09:27.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Illumina",
+            "fld1mbRJlknicV1Dk": [
+              "selRmHPAawDFtEzPl"
+            ],
+            "fldMvtAoxHCri39uZ": "selEKQtgEMWOMn8TL",
+            "fldXPv4gHmcbxvQRi": "2023-06-21T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.sec.gov/Archives/edgar/data/1110803/000111080323000048/ilmn-20230621.htm",
+            "fld5Rl99rerd8qYDZ": 28,
+            "fldbWCltYdMzywX2v": "sela5OuwQcXOkl5WO",
+            "fldjEGNXkyOJSP4ZM": "2023-06-27T22:09:27.000Z",
             "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
           }
         },
@@ -13461,6 +14217,25 @@
           }
         },
         {
+          "id": "recxmdONYTraOe77r",
+          "createdTime": "2023-07-01T00:53:57.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Pilot",
+            "fld1mbRJlknicV1Dk": [
+              "selKhBn9WkXIaFjXW"
+            ],
+            "fldMvtAoxHCri39uZ": "seluHafT4M09jrLuo",
+            "flduZSpdFqkB4eeEh": 45,
+            "fldMPQjXwImpjkDqb": 0.13,
+            "fldXPv4gHmcbxvQRi": "2023-06-16T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "Internal memo",
+            "fld5Rl99rerd8qYDZ": 116,
+            "fldbWCltYdMzywX2v": "selRkNOUKADWhjDVg",
+            "fldjEGNXkyOJSP4ZM": "2023-07-01T00:53:57.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
           "id": "reczDyf0Av8v7zXRw",
           "createdTime": "2023-06-17T00:37:07.000Z",
           "cellValuesByColumnId": {
@@ -13509,6 +14284,7 @@
             "fldMPQjXwImpjkDqb": 0.33,
             "fldXPv4gHmcbxvQRi": "2023-06-15T00:00:00.000Z",
             "fldcrmTO88VxOYeSX": "https://www.theinformation.com/articles/carerev-plans-to-cut-roughly-a-third-of-staff",
+            "fld1pOF72T7Dec2lY": "https://docs.google.com/spreadsheets/d/1Dhovfj6K2vONB56_mJ_ViX2BYxR9hBwoqBUUFAYAC1I/edit#gid=1643354458",
             "fld5Rl99rerd8qYDZ": 51,
             "fldbWCltYdMzywX2v": "seljXqXvNGlbMKwqs",
             "fldjEGNXkyOJSP4ZM": "2023-06-16T05:05:42.000Z",
@@ -13736,6 +14512,26 @@
           }
         },
         {
+          "id": "reciufMTmNXjs0j2S",
+          "createdTime": "2023-06-12T16:15:02.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "GoCardless",
+            "fld1mbRJlknicV1Dk": [
+              "selnBHRWdTxvcfNCY",
+              "sel8GpsCiYX4oM0Yl"
+            ],
+            "fldMvtAoxHCri39uZ": "seluHafT4M09jrLuo",
+            "flduZSpdFqkB4eeEh": 150,
+            "fldMPQjXwImpjkDqb": 0.17,
+            "fldXPv4gHmcbxvQRi": "2023-06-12T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://sifted.eu/articles/gocardless-lays-off-15-of-staff-news",
+            "fld5Rl99rerd8qYDZ": 529,
+            "fldbWCltYdMzywX2v": "selxX017D0jzUaIEL",
+            "fldjEGNXkyOJSP4ZM": "2023-06-12T16:15:02.000Z",
+            "fldnR6AcR7HjRtwrG": "sel5OzJCT8kst6x2A"
+          }
+        },
+        {
           "id": "recGP22fuGLI0o9tU",
           "createdTime": "2023-06-12T16:12:49.000Z",
           "cellValuesByColumnId": {
@@ -13789,25 +14585,6 @@
             "fldbWCltYdMzywX2v": "selCjvAwzOBfTt3H6",
             "fldjEGNXkyOJSP4ZM": "2023-06-14T03:51:44.000Z",
             "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
-          }
-        },
-        {
-          "id": "reciufMTmNXjs0j2S",
-          "createdTime": "2023-06-12T16:15:02.000Z",
-          "cellValuesByColumnId": {
-            "fldWyUNuYW5ObN8Fw": "GoCardless",
-            "fld1mbRJlknicV1Dk": [
-              "selnBHRWdTxvcfNCY",
-              "sel8GpsCiYX4oM0Yl"
-            ],
-            "fldMvtAoxHCri39uZ": "seluHafT4M09jrLuo",
-            "fldMPQjXwImpjkDqb": 0.15,
-            "fldXPv4gHmcbxvQRi": "2023-06-12T00:00:00.000Z",
-            "fldcrmTO88VxOYeSX": "https://sifted.eu/articles/gocardless-lays-off-15-of-staff-news",
-            "fld5Rl99rerd8qYDZ": 529,
-            "fldbWCltYdMzywX2v": "selxX017D0jzUaIEL",
-            "fldjEGNXkyOJSP4ZM": "2023-06-12T16:15:02.000Z",
-            "fldnR6AcR7HjRtwrG": "sel5OzJCT8kst6x2A"
           }
         },
         {
@@ -14066,6 +14843,24 @@
             "fld5Rl99rerd8qYDZ": 340,
             "fldbWCltYdMzywX2v": "selEPnLyx1vpTXoMi",
             "fldjEGNXkyOJSP4ZM": "2023-06-10T18:17:08.000Z",
+            "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
+          }
+        },
+        {
+          "id": "recPhaEws2ptD5zyH",
+          "createdTime": "2023-06-24T03:49:51.000Z",
+          "cellValuesByColumnId": {
+            "fldWyUNuYW5ObN8Fw": "Flatiron Health",
+            "fld1mbRJlknicV1Dk": [
+              "selaY0t9IlOz71lPt"
+            ],
+            "fldMvtAoxHCri39uZ": "selEKQtgEMWOMn8TL",
+            "flduZSpdFqkB4eeEh": 39,
+            "fldXPv4gHmcbxvQRi": "2023-06-07T00:00:00.000Z",
+            "fldcrmTO88VxOYeSX": "https://www.beckershospitalreview.com/oncology/cancer-care-startup-to-lay-off-employees.html",
+            "fld5Rl99rerd8qYDZ": 324,
+            "fldbWCltYdMzywX2v": "selEPnLyx1vpTXoMi",
+            "fldjEGNXkyOJSP4ZM": "2023-06-24T03:49:51.000Z",
             "fldnR6AcR7HjRtwrG": "seldVNXmT64IJdbP2"
           }
         },
@@ -64235,8 +65030,11 @@
           "ruleType": "androidAppWithMinVersion"
         }
       },
+      "interfaceDesignerGranularLinkAndCreateEditabilityInForeignKeyCellEditors": {
+        "trafficLevel": 5
+      },
       "interfaceDesignerNoRowPageGarbageCollection": {
-        "trafficLevel": 0
+        "trafficLevel": 100
       },
       "interfaceDesignerAppsByAirtableNavigationByApplicationIdOverride": {
         "trafficLevel": 0
@@ -64274,6 +65072,12 @@
       "externalTableSyncSkipRealTimeSyncForSyncWithFieldTypeCustomizationToLinkedRecord": {
         "trafficLevel": 100
       },
+      "externalTableSyncSkipDuplicateRowInBatchUpdate": {
+        "trafficLevel": 100
+      },
+      "externalTableSyncSkipDuplicateExternalResourceIdBySyncIdThenRowIdConstruction": {
+        "trafficLevel": 75
+      },
       "goldenDatasetsRelationshipMapBeta": {
         "trafficLevel": 100
       },
@@ -64289,8 +65093,11 @@
       "syncDiscoveryMenuRedesignForEnterpriseWorkspaces": {
         "trafficLevel": 100
       },
+      "externalTableSyncTargetUseOldValueMapForMissingForeignKeys": {
+        "trafficLevel": 75
+      },
       "externalTableSyncTargetConfigFixInvalidChoiceId": {
-        "trafficLevel": 15
+        "trafficLevel": 50
       },
       "externalTableSyncConfigUpdateRetainFTC": {
         "trafficLevel": 100
@@ -64311,7 +65118,7 @@
         "trafficLevel": 0
       },
       "clientUploaderEmbeddedInFilestack": {
-        "trafficLevel": 10
+        "trafficLevel": 100
       },
       "attachmentsCopyAndPasteUploadWithoutFilestack": {
         "trafficLevel": 100
@@ -64355,9 +65162,6 @@
           "reason": "disabled"
         }
       },
-      "recordTemplates": {
-        "trafficLevel": 100
-      },
       "workflowsSendNotificationAction": {
         "trafficLevel": 0
       },
@@ -64366,6 +65170,9 @@
       },
       "collaboratorFieldInSyncedTables": {
         "trafficLevel": 100
+      },
+      "interfaceCollaboratorPaste": {
+        "trafficLevel": 50
       },
       "columnBulkDelete": {
         "trafficLevel": 100
@@ -64416,7 +65223,7 @@
         "trafficLevel": 0
       },
       "ekmEnableEncryptionForArchiveData": {
-        "trafficLevel": 40
+        "trafficLevel": 100
       },
       "ekmEnableAttachmentReEncryption": {
         "trafficLevel": 0

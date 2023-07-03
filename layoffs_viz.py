@@ -34,35 +34,32 @@ def time_layoff(data):
             label="Month",
             method="update",
             args=[
-                {"x": [month["Month"]], "y": [month["# Laid Off"]], "y1":[month['Company']]},
-                {"xaxis.title.text": "Month", "yaxis.title.text": "# Laid Off"}
+                {"x": [month["Month"]], "y2": [month["# Laid Off"]], "y1":[month['Company']]},
             ],
         ),
         dict(
             label="Year",
             method="update",
             args=[
-                {"x": [year["Year"]], "y": [year["# Laid Off"]], "y1":[year['Company']]},
-                {"xaxis.title.text": "Year", "yaxis.title.text": "# Laid Off"}
+                {"x": [year["Year"]], "y2": [year["# Laid Off"]], "y1":[year['Company']]},
             ],
         ),
         dict(
             label="Quarter",
             method="update",
             args=[
-                {"x": [quarter["Quarter"]], "y": [quarter["# Laid Off"]], "y1":[quarter['Company']]},
-                {"xaxis.title.text": "Quarter", "yaxis.title.text": "# Laid Off"}
+                {"x": [quarter["Quarter"]], "y2": [quarter["# Laid Off"]], "y1":[quarter['Company']]},
             ],
         ),
     ]
     
     fig = go.Figure()
 
-    # Add line for # Laid Off
-    fig.add_trace(go.Scatter(x=month['Month'], y=month['# Laid Off'], name='# Laid Off', mode='lines',line_color='red'))
-
     # Add line for Company
-    fig.add_trace(go.Bar(x=month['Month'], y=month['Company'], name='# Companies',marker_color='rgba(0, 0, 255, 0.3)',yaxis='y2'))
+    fig.add_trace(go.Bar(x=month['Month'], y=month['Company'], name='Companies with Layoffs',marker_color='rgba(254,206,186,255)',yaxis='y1'))
+    
+    # Add line for # Laid Off
+    fig.add_trace(go.Scatter(x=month['Month'], y=month['# Laid Off'], name='Employees Laid Off', mode='lines',line_color='#67000d',yaxis='y2'))
 
     # Set plot layout
     fig.update_layout(
@@ -72,14 +69,14 @@ def time_layoff(data):
             'font': {'size': 24, 'family': 'Monospace, bold'}
         },
         xaxis=dict(title=''),
-        yaxis=dict(title='# Laid Off'),
-        yaxis2=dict(title='# Companies', side='right', overlaying='y', showgrid=False),
+        yaxis=dict(title='Companies with Layoffs'),
+        yaxis2=dict(title='Employees Laid Off', side='right', overlaying='y', showgrid=False),
         updatemenus=[dict(buttons=buttons)],
-        legend=dict(
-            yanchor="top",
-            y=0.99,
+        legend=dict(orientation='h',
+            yanchor="bottom",
+            y=1,
             xanchor="left",
-            x=0.01
+            x=0.20
         )
     )
 
@@ -93,7 +90,14 @@ def country_layoff(data,geo_json,title):
     geo_df = pd.DataFrame(geo_json['features'])
     geo_df['Country'] = geo_df['properties'].apply(lambda x: x['name'])
 
-    country_laid_off = data.groupby('Country')['# Laid Off'].sum().reset_index()
+    country_laid_off = data.groupby('Country').agg({'# Laid Off':'sum',
+                                                   'Company':'nunique'}).reset_index()
+    shutdown = data[data['%']==1].groupby('Country')['Company'].nunique().reset_index()
+    
+    country_laid_off = country_laid_off.merge(shutdown,on='Country',how='left').fillna(0)
+    
+    country_laid_off.columns = ['Country','# Laid Off','Total Companies','Companies Shutdowns']
+    
     country_laid_off = geo_df.merge(country_laid_off,on='Country',how='left')
     country_laid_off['sqrt Laid Off'] = np.sqrt(country_laid_off['# Laid Off'])
     
@@ -104,11 +108,11 @@ def country_layoff(data,geo_json,title):
                        locations=country_laid_off.id,
                        color="sqrt Laid Off",
                        projection="equirectangular",
-                        color_continuous_scale=colorscale,
-                    color_continuous_midpoint=0,
-                    range_color=(0, 500),
-                       #color_continuous_scale='Reds',
-                       hover_data={'Country': True, '# Laid Off': True,'id':False,"sqrt Laid Off":False})
+                        #color_continuous_scale=colorscale,
+                    #color_continuous_midpoint=0,
+                    #range_color=(0, 500),
+                       color_continuous_scale='Reds',
+                       hover_data={'Country': True, '# Laid Off': True,'id':False,"sqrt Laid Off":False,'Companies Shutdowns':True,'Total Companies':True})
     
     fig.update_geos(#fitbounds="locations", 
                     visible=True,
@@ -134,7 +138,7 @@ st.markdown(
     """
     <div style='text-align: center;'>
         <h1>Visualizing the Impact of Layoffs</h1>
-        <p>Data Source: <a href="https://layoffs.fyi/">layoffs.fyi</a> Last Updated: June 21 2023</p>
+        <p>Data Source: <a href="https://layoffs.fyi/">layoffs.fyi</a> Last Updated: June 30 2023</p>
     </div>
     """,
     unsafe_allow_html=True
@@ -142,10 +146,11 @@ st.markdown(
 
 st.markdown(" ")
 st.markdown(" ")
-m1,m2,m3,m4,m5,m6,m7 = st.columns(7)
+m1,m2,m3,m4,m5,m6 = st.columns(6)
 m2.metric("Total Reports", data.shape[0])
-m4.metric("Total Laid Off", str(int(data['# Laid Off'].sum()/1000))+"K+")
-m6.metric("Total Companies", int(data['Company'].nunique()))
+m3.metric("Total Laid Off", str(int(data['# Laid Off'].sum()/1000))+"K+")
+m4.metric("Total Companies", int(data['Company'].nunique()))
+m5.metric("Companies Shutdown", int(data[data['%']==1]['Company'].nunique()))
 
 country_layoff(data,geo_json,"Across the World So Far")
 
@@ -161,10 +166,10 @@ st.markdown(
 # +
 filter1, filter2, filter3, filter4 = st.columns(4)
 
-year_filter = filter1.selectbox("", ['Select Year']+list(data['Year'].unique()))
-industry_filter = filter2.selectbox("", ['Select Industry']+sorted(list(data['Industry'].unique())))
-country_filter = filter3.selectbox("", ['Select Country']+list(data['Country'].unique()))
-company_filter = filter4.selectbox("", ['Select Company']+list(data['Company'].unique()))
+year_filter = filter1.selectbox("", ['Select Year (All)']+list(data['Year'].unique()))
+industry_filter = filter2.selectbox("", ['Select Industry (All)']+sorted(list(data['Industry'].unique())))
+country_filter = filter3.selectbox("", ['Select Country (All)']+list(data['Country'].unique()))
+company_filter = filter4.selectbox("", ['Select Company (All)']+list(data['Company'].unique()))
 
 # +
 data['dum'] = True
@@ -172,13 +177,13 @@ data['dum'] = True
 mask = (data['dum'] == True)
 
 # Update the mask based on the selected filters
-if year_filter != 'Select Year':
+if year_filter != 'Select Year (All)':
     mask &= (data['Year'] == year_filter)
-if industry_filter != 'Select Industry':
+if industry_filter != 'Select Industry (All)':
     mask &= (data['Industry'] == industry_filter)
-if country_filter != 'Select Country':
+if country_filter != 'Select Country (All)':
     mask &= (data['Country'] == country_filter)
-if company_filter != 'Select Company':
+if company_filter != 'Select Company (All)':
     mask &= (data['Company'] == company_filter)
 
 # Filter the data DataFrame based on the selected filters
@@ -194,17 +199,17 @@ def top_layoffs(data,n):
         columnwidth = [1000,600],
         header=dict(values=[top['Company'].iloc[0], top['# Laid Off'].iloc[0]],
                     line_color='#F5F1F1',
-                    fill_color='#D7DDEC',
+                    fill_color='#f0f2f6',
                     align='left',
-                   height=40,
-                   font_size=16),
+                   height=33.5,
+                   font_size=18),
         cells=dict(values=[top['Company'].to_list()[1:], # 1st column
                            top['# Laid Off'].to_list()[1:]], # 2nd column
                    line_color='#F5F1F1',
-                   fill_color='#D7DDEC',
+                   fill_color='#f0f2f6',
                    align='left',
-                  height=40,
-                  font_size=16))
+                  height=33.5,
+                  font_size=18))
     ])
     
     fig.update_layout(hovermode='closest',
@@ -222,7 +227,7 @@ def top_layoffs(data,n):
 t1,t2 = st.columns([4,10])
 
 with t1:
-    top_layoffs(filtered_data,7)
+    top_layoffs(filtered_data,8)
     
 with t2:
     time_layoff(filtered_data)
@@ -233,7 +238,7 @@ with t2:
 def industry_layoff(data):
     industry_group = data.groupby('Industry')['# Laid Off'].sum().reset_index()
     
-    threshold = 15000
+    threshold = 17000
 
     # Filter out smaller categories
     large_categories = industry_group[industry_group['# Laid Off'] > threshold]
@@ -241,7 +246,8 @@ def industry_layoff(data):
     
     large_categories.loc[large_categories[large_categories['Industry'] == 'Other'].index, '# Laid Off'] += small_categories['# Laid Off'].sum()
     
-    fig = px.pie(large_categories, values='# Laid Off', names='Industry',hole=0.6)
+    fig = px.pie(large_categories, values='# Laid Off', names='Industry',hole=0.6,
+                color_discrete_sequence= px.colors.sequential.Reds)
     
     fig.update_layout(
         title={
@@ -258,7 +264,7 @@ def industry_layoff(data):
 def stage_layoff(data):
     stage_group = data.groupby('Stage')['# Laid Off'].sum().reset_index()
     
-    threshold = 5000
+    threshold = 8000
 
     # Filter out smaller categories
     large_categories = stage_group[stage_group['# Laid Off'] > threshold]
@@ -266,7 +272,8 @@ def stage_layoff(data):
     
     large_categories.loc[len(large_categories.index)] = ['Other', small_categories['# Laid Off'].sum() ] 
     
-    fig = px.pie(large_categories, values='# Laid Off', names='Stage',hole=.6)
+    fig = px.pie(large_categories, values='# Laid Off', names='Stage',hole=.6,
+                color_discrete_sequence= px.colors.sequential.Reds)
     
     fig.update_layout(
         title={
@@ -300,13 +307,15 @@ def location_layoff(data):
     
     fig.update_layout(
         title={
-            'text': 'Layoffs in Top 10 Cities',
+            'text': 'Top 10 Cities with Layoffs',
             'x': 0.5,  # Set the title's horizontal alignment to the center
             'font': {'size': 24, 'family': 'Monospace, bold'}
         },
         xaxis=dict(title=''),
         yaxis=dict(title='')
     )
+    
+    fig.update_traces(marker_color='rgba(254,206,186,255)')
     
     st.plotly_chart(fig)
 
