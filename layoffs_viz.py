@@ -242,7 +242,8 @@ try:
         if len(industry_group[industry_group['Industry']!='Other'])>=8:
             large_categories = industry_group[industry_group['Industry']!='Other'].head(8)
             other_categories = industry_group[~industry_group['Industry'].isin(large_categories['Industry'].unique())]['# Laid Off'].sum()
-            large_categories = large_categories.append({'Industry': 'Other', '# Laid Off': other_categories}, ignore_index=True)
+            large_categories.loc[len(large_categories)] = {'Industry': 'Other', '# Laid Off': other_categories}
+            #large_categories = large_categories.append({'Industry': 'Other', '# Laid Off': other_categories}, ignore_index=True)
         else:
             large_categories = industry_group.copy()
         
