@@ -340,4 +340,6 @@ try:
     st.dataframe(filtered_data[['Day','Company','Location HQ','Industry','Country','Stage','# Laid Off','Source']])
 
 except Exception as e:
+    
     st.error('Try another combination of filters')
+    st.write(e)
