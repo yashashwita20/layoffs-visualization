@@ -4,10 +4,15 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 import plotly.subplots as sp
+import json
+import requests
+import os
+
+if os.getenv("STREAMLIT_ENV") != "cloud":
+    from dotenv import load_dotenv
+    load_dotenv()
 
 # +
-import json
-
 # Read the world.geojson file
 with open('world.geojson', 'r') as f:
     geo_json = json.load(f)
@@ -15,7 +20,132 @@ with open('world.geojson', 'r') as f:
 st.set_page_config(layout="wide")
 # -
 
-data = pd.read_json('Layoffs - Preprocessed.json')
+# ## Loading Data
+
+# +
+cookies = {
+    '__Host-airtable-session': os.getenv('AIRTABLE_SESSION'),
+    '__Host-airtable-session.sig': os.getenv('AIRTABLE_SIG'),
+    'brw': os.getenv('BRW'),
+    'brwConsent': os.getenv('BRW_CONSENT'),
+    'AWSALBTGCORS': os.getenv('AWSALBTGCORS'),
+}
+
+headers = {
+    'accept': '*/*',
+    'accept-language': 'en-US,en;q=0.9',
+    'priority': 'u=1, i',
+    'sec-ch-ua': '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"macOS"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-storage-access': 'active',
+    'traceparent': '00-9f1afa5c9fb858efedeef7dafe3f7d18-c6749b2977443f3b-01',
+    'tracestate': '',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+    'x-airtable-accept-msgpack': 'true',
+    'x-airtable-application-id': 'app1PaujS9zxVGUZ4',
+    'x-airtable-inter-service-client': 'webClient',
+    'x-airtable-page-load-id': 'pglfkMix40FCtovav',
+    'x-early-prefetch': 'true',
+    'x-requested-with': 'XMLHttpRequest',
+    'x-time-zone': 'America/Chicago',
+    'x-user-locale': 'en',
+}
+
+url ='https://airtable.com/v0.3/view/viwN3RMGptp84mfag/readSharedViewData?stringifiedObjectParams=%7B%22shouldUseNestedResponseFormat%22%3Atrue%7D&requestId=reqaIYa4tXkIhE8Po&accessPolicy=%7B%22allowedActions%22%3A%5B%7B%22modelClassName%22%3A%22view%22%2C%22modelIdSelector%22%3A%22viwN3RMGptp84mfag%22%2C%22action%22%3A%22readSharedViewData%22%7D%2C%7B%22modelClassName%22%3A%22view%22%2C%22modelIdSelector%22%3A%22viwN3RMGptp84mfag%22%2C%22action%22%3A%22getMetadataForPrinting%22%7D%2C%7B%22modelClassName%22%3A%22view%22%2C%22modelIdSelector%22%3A%22viwN3RMGptp84mfag%22%2C%22action%22%3A%22readSignedAttachmentUrls%22%7D%2C%7B%22modelClassName%22%3A%22row%22%2C%22modelIdSelector%22%3A%22rows%20*%5BdisplayedInView%3DviwN3RMGptp84mfag%5D%22%2C%22action%22%3A%22createDocumentPreviewSession%22%7D%2C%7B%22modelClassName%22%3A%22view%22%2C%22modelIdSelector%22%3A%22viwN3RMGptp84mfag%22%2C%22action%22%3A%22downloadCsv%22%7D%2C%7B%22modelClassName%22%3A%22view%22%2C%22modelIdSelector%22%3A%22viwN3RMGptp84mfag%22%2C%22action%22%3A%22downloadICal%22%7D%2C%7B%22modelClassName%22%3A%22row%22%2C%22modelIdSelector%22%3A%22rows%20*%5BdisplayedInView%3DviwN3RMGptp84mfag%5D%22%2C%22action%22%3A%22downloadAttachment%22%7D%5D%2C%22shareId%22%3A%22shroKsHx3SdYYOzeh%22%2C%22applicationId%22%3A%22app1PaujS9zxVGUZ4%22%2C%22generationNumber%22%3A0%2C%22expires%22%3A%222025-07-31T00%3A00%3A00.000Z%22%2C%22signature%22%3A%22033b9a1a40aa550ecf4bea5cba6cacaac6f08e70659982324770f43d5f62a338%22%7D'
+
+# +
+response = requests.get(url,
+    cookies=cookies,
+    headers=headers,
+)
+
+json_data = response.json()
+# -
+
+# ### Data Preprocessing
+
+# +
+key_map = {}
+            
+for item in json_data['data']['table']['columns']:
+    id_ = item['id']
+    name_ = item['name']
+    key_map[id_] = name_
+
+# +
+key_map_switch = { key_map[k]:k for k in key_map}
+
+#Location HQ
+for item in json_data['data']['table']['columns']:
+    if item['id']==key_map_switch['Location HQ']:
+        for i in item['typeOptions']['choices'].values():
+            id_ = i['id']
+            name_ = i['name']
+            key_map[id_] = name_
+    
+#Industry
+for item in json_data['data']['table']['columns']:
+    if item['id']==key_map_switch['Industry']:
+        for i in item['typeOptions']['choices'].values():
+            id_ = i['id']
+            name_ = i['name']
+            key_map[id_] = name_
+
+#Country
+for item in json_data['data']['table']['columns']:
+    if item['id']==key_map_switch['Country']:
+        for i in item['typeOptions']['choices'].values():
+            id_ = i['id']
+            name_ = i['name']
+            key_map[id_] = name_
+
+#Stage
+for item in json_data['data']['table']['columns']:
+    if item['id']==key_map_switch['Stage']:
+        for i in item['typeOptions']['choices'].values():
+            id_ = i['id']
+            name_ = i['name']
+            key_map[id_] = name_
+
+# -
+
+row_data = []
+for item in json_data['data']['table']['rows']:
+    item['cellValuesByColumnId']['id'] = item['id']
+    row_data.append(item['cellValuesByColumnId'])
+
+
+# +
+def replace_values(data, replacements):
+    for item in data:
+        for key, value in item.items():
+            if key in [key_map_switch[i] for i in key_map_switch if i in ['Location HQ', 'Industry', 'Stage', 'Country']]:
+                if isinstance(value, list):
+                    item[key] = [replacements[item] for item in value]
+                else:
+                    item[key] = replacements[value]
+
+replace_values(row_data, key_map)
+
+
+# +
+def replace_keys(data, replacements):
+    for item in data:
+        item_copy = item.copy()
+        for key, value in item_copy.items():
+            item[replacements.get(key, key)] = item.pop(key, None)
+
+replace_keys(row_data, key_map)
+# -
+
+data = pd.DataFrame(row_data)
+data['Date'] = pd.to_datetime(data['Date'])
+data['Date Added'] = pd.to_datetime(data['Date Added'])
+
 data['Country'] = data['Country'].replace('United States', 'United States of America')
 data['Month'] = data['Date'].dt.to_period('M').astype(str)
 data['Year'] = data['Date'].dt.to_period('Y').astype(str)
@@ -63,11 +193,11 @@ def time_layoff(data):
 
     # Set plot layout
     fig.update_layout(
-        title={
-            'text': 'Layoffs over Time',
-            'x': 0.5,  # Set the title's horizontal alignment to the center
-            'font': {'size': 24, 'family': 'Monospace, bold'}
-        },
+#         title={
+#             'text': 'Layoffs over Time',
+#             'x': 0.5,  # Set the title's horizontal alignment to the center
+#             'font': {'size': 24, 'family': 'Monospace, bold'}
+#         },
         xaxis=dict(title=''),
         yaxis=dict(title='Companies with Layoffs'),
         yaxis2=dict(title='Employees Laid Off', side='right', overlaying='y', showgrid=False),
@@ -82,7 +212,7 @@ def time_layoff(data):
 
     # Display the plot
     #fig.show()
-    st.plotly_chart(fig)
+    st.plotly_chart(fig,use_container_width=True)
 
 
 def country_layoff(data,geo_json,title):
@@ -96,7 +226,7 @@ def country_layoff(data,geo_json,title):
     
     country_laid_off = country_laid_off.merge(shutdown,on='Country',how='left').fillna(0)
     
-    country_laid_off.columns = ['Country','# Laid Off','Total Companies','Companies Shutdowns']
+    country_laid_off.columns = ['Country','# Laid Off','Total Companies','# Companies Shutdown']
     
     country_laid_off = geo_df.merge(country_laid_off,on='Country',how='left')
     country_laid_off['sqrt Laid Off'] = np.sqrt(country_laid_off['# Laid Off'])
@@ -112,7 +242,7 @@ def country_layoff(data,geo_json,title):
                     #color_continuous_midpoint=0,
                     #range_color=(0, 500),
                        color_continuous_scale='Reds',
-                       hover_data={'Country': True, '# Laid Off': True,'id':False,"sqrt Laid Off":False,'Companies Shutdowns':True,'Total Companies':True})
+                       hover_data={'Country': True, '# Laid Off': True,'id':False,"sqrt Laid Off":False,'# Companies Shutdown':True,'Total Companies':True})
     
     fig.update_geos(#fitbounds="locations", 
                     visible=True,
@@ -122,41 +252,79 @@ def country_layoff(data,geo_json,title):
 
     # Set the layout
     fig.update_layout(hovermode='closest',
-        title={
-            'text': title,
-            'x': 0.5,  # Set the title's horizontal alignment to the center
-            'font': {'size': 24, 'family': 'Monospace, bold'}
-        },coloraxis_showscale=False
+#         title={
+#             'text': title,
+#             'x': 0.5,  # Set the title's horizontal alignment to the center
+#             'font': {'size': 24, 'family': 'Monospace, bold'}
+#         },
+        coloraxis_showscale=False,
+        width=1500,
+        height=500,
+        margin=dict(l=0, r=0, t=0, b=0)
     )
 
     # Show the map
     #fig.show()
-    st.plotly_chart(fig,config={'scrollZoom': False})
+    st.plotly_chart(fig,config={'scrollZoom': False},use_container_width=True)
 
+
+# ## Streamlit
 
 st.markdown(
     """
     <div style='text-align: center;'>
         <h1>Visualizing the Impact of Layoffs</h1>
-        <p>Data Source: <a href="https://layoffs.fyi/">layoffs.fyi</a> Last Updated: June 30 2023</p>
+        <p>Data Source: <a href="https://layoffs.fyi/">layoffs.fyi</p>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-st.markdown(" ")
-st.markdown(" ")
-m1,m2,m3,m4,m5,m6 = st.columns(6)
-m2.metric("Total Reports", data.shape[0])
-m3.metric("Total Laid Off", str(int(data['# Laid Off'].sum()/1000))+"K+")
-m4.metric("Total Companies", int(data['Company'].nunique()))
-m5.metric("Companies Shutdown", int(data[data['%']==1]['Company'].nunique()))
+st.markdown(
+    """
+    <div style='text-align: center;'>
+        <h2>Across the World So Far</h2>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 country_layoff(data,geo_json,"Across the World So Far")
+
+
+# +
+def centered_metric(label, value):
+    st.markdown(f"""
+        
+        <div style="
+                background-color: #f8f9fa;
+                border: 1px solid #dee2e6;
+                border-radius: 12px;
+                padding: 15px;
+                text-align: center;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+                font-family: monospace;
+            ">
+            <div style='font-size: 16px; color: gray;'>{label}</div>
+            <div style='font-size: 28px;'>{value}</div>
+        </div>
+    """, unsafe_allow_html=True)
+
+m1,m2,m3,m4,m5,m6 = st.columns([3,2,2,2,2,3])
+with m2:
+    centered_metric("Total Reports", data.shape[0])
+with m3:
+    centered_metric("Total Laid Off", str(int(data['# Laid Off'].sum()/1000))+"K+")
+with m4:
+    centered_metric("Total Companies", int(data['Company'].nunique()))
+with m5:
+    centered_metric("Companies Shutdown", int(data[data['%']==1]['Company'].nunique()))
+# -
 
 st.markdown(
     """
     <div style='text-align: center;'>
+        <br>
         <h2>Exploring the Depths</h2>
     </div>
     """,
@@ -166,10 +334,10 @@ st.markdown(
 # +
 filter1, filter2, filter3, filter4 = st.columns(4)
 
-year_filter = filter1.selectbox("", ['Select Year (All)']+list(data['Year'].unique()))
-industry_filter = filter2.selectbox("", ['Select Industry (All)']+sorted(list(data['Industry'].unique())))
-country_filter = filter3.selectbox("", ['Select Country (All)']+list(data['Country'].unique()))
-company_filter = filter4.selectbox("", ['Select Company (All)']+list(data[data['# Laid Off'].notnull()]['Company'].unique()))
+year_filter = filter1.selectbox("", ['Select Year (All)']+list(data['Year'].dropna().unique()))
+industry_filter = filter2.selectbox("", ['Select Industry (All)']+sorted(data['Industry'].dropna().astype(str).unique()))
+country_filter = filter3.selectbox("", ['Select Country (All)']+list(data['Country'].dropna().astype(str).unique()))
+company_filter = filter4.selectbox("", ['Select Company (All)']+list(data[data['# Laid Off'].notnull()]['Company'].astype(str).unique()))
 
 try:
     # +
@@ -192,46 +360,55 @@ try:
 
 
     # -
+    def custom_metric(label, value, delta):
+        st.markdown(f"""
+            <div style="
+                background-color: #f8f9fa;
+                border: 1px solid #dee2e6;
+                border-radius: 12px;
+                padding: 15px;
+                text-align: center;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+                font-family: monospace;
+            ">
+                <div style="font-size: 24px; color: #212529;">{value}</div>
+                <div style="font-size: 16px; color: #e03131;">{delta}</div>
+                <div style="font-size: 16px; color: #6c757d;">{label}</div>
+            </div>
+        """, unsafe_allow_html=True)
+
+
 
     def top_layoffs(data,n):
-        top = data[['Day','Company','# Laid Off']].dropna().groupby(['Company']).sum().reset_index().sort_values(by=['# Laid Off'],ascending=False).dropna().head(n)
-        
-        fig = go.Figure(data=[go.Table(
-            columnwidth = [1000,600],
-            header=dict(values=[top['Company'].iloc[0], top['# Laid Off'].iloc[0]],
-                        line_color='#F5F1F1',
-                        fill_color='#f0f2f6',
-                        align='left',
-                    height=33.5,
-                    font_size=18),
-            cells=dict(values=[top['Company'].to_list()[1:], # 1st column
-                            top['# Laid Off'].to_list()[1:]], # 2nd column
-                    line_color='#F5F1F1',
-                    fill_color='#f0f2f6',
-                    align='left',
-                    height=33.5,
-                    font_size=18))
-        ])
-        
-        fig.update_layout(hovermode='closest',
-            title={
-                'text': "Top Layoffs",
-                'x': 0.5,  # Set the title's horizontal alignment to the center
-                'font': {'size': 24, 'family': 'Monospace, bold'}
-            },coloraxis_showscale=False,width=2400
-        )
-        
-        st.plotly_chart(fig)
+        top = data[['Day','Company','# Laid Off']].dropna().sort_values(by=['# Laid Off'],ascending=False).head(n)
+        top = top.rename(columns={'# Laid Off': 'Laid_Off'})
+        top['Day'] = pd.to_datetime(top['Day']).dt.strftime('%b %Y')
+
+        for i in range(0, len(top), 5):
+            cols = st.columns(5)
+            for j in range(5):
+                if i + j < len(top):
+                    row = top.iloc[i + j]
+                    with cols[j]:
+                        custom_metric(
+                            label=row.Day,
+                            value=row.Company,
+                            delta=f"{int(row.Laid_Off):,} employees"
+                        )
+            st.markdown("<h6> </h6>", unsafe_allow_html=True)
 
 
-    # +
-    t1,t2 = st.columns([4,10])
 
-    with t1:
-        top_layoffs(filtered_data,8)
+    #+
+    st.markdown("<h1> </h1>", unsafe_allow_html=True)
+    
+    st.markdown("<h3 style='text-align: center;'>Top Layoffs</h3>", unsafe_allow_html=True)
+    top_layoffs(filtered_data,10)
+    
+    st.markdown("<h1> </h1>", unsafe_allow_html=True)
         
-    with t2:
-        time_layoff(filtered_data)
+    st.markdown("<h3 style='text-align: center;'>Layoffs over Time</h3>", unsafe_allow_html=True)
+    time_layoff(filtered_data)
 
 
     # -
@@ -250,16 +427,16 @@ try:
         fig = px.pie(large_categories, values='# Laid Off', names='Industry',hole=0.6,
                     color_discrete_sequence= px.colors.sequential.Reds_r)
         
-        fig.update_layout(
-            title={
-                'text': 'Layoffs by Industry',
-                'x': 0.5,  # Set the title's horizontal alignment to the center
-                'font': {'size': 24, 'family': 'Monospace, bold'}
-            }
-        )
+#         fig.update_layout(
+#             title={
+#                 'text': 'Layoffs by Industry',
+#                 'x': 0.5,  # Set the title's horizontal alignment to the center
+#                 'font': {'size': 24, 'family': 'Monospace, bold'}
+#             }
+#         )
         
         # Display the chart
-        st.plotly_chart(fig)
+        st.plotly_chart(fig,use_container_width=True)
 
 
     def stage_layoff(data):
@@ -276,23 +453,26 @@ try:
                     color_discrete_sequence= px.colors.sequential.Reds_r)
         
         fig.update_layout(
-            title={
-                'text': 'Layoffs by Stage',
-                'x': 0.5,  # Set the title's horizontal alignment to the center
-                'font': {'size': 24, 'family': 'Monospace, bold'}
-            }, legend_traceorder="reversed"
+#             title={
+#                 'text': 'Layoffs by Stage',
+#                 'x': 0.5,  # Set the title's horizontal alignment to the center
+#                 'font': {'size': 24, 'family': 'Monospace, bold'}
+#             }, 
+            legend_traceorder="reversed"
         )
         
         # Display the chart
-        st.plotly_chart(fig)
+        st.plotly_chart(fig,use_container_width=True)
 
 
     # +
     plot1, plot2 = st.columns(2)
 
     with plot1:
+        st.markdown("<h3 style='text-align: center;'>Layoffs by Industry</h3>", unsafe_allow_html=True)
         industry_layoff(filtered_data)
     with plot2:
+        st.markdown("<h3 style='text-align: center;'>Layoffs by Company Stage</h3>", unsafe_allow_html=True)
         stage_layoff(filtered_data)
 
 
@@ -300,46 +480,52 @@ try:
 
     def location_layoff(data):
         
-        data['City'] = data['Location HQ'].apply(lambda x:x[0]+" ("+x[1]+")" if len(x)>1 else x[0])
+#         data['City'] = data['Location HQ'].apply(lambda x:x[0]+" ("+x[1]+")" if len(x)>1 else x[0])
+        data['City'] = data['Location HQ'].dropna().apply(lambda x:x[0])
         location_group  = data.groupby('City')['# Laid Off'].sum().reset_index().sort_values('# Laid Off').tail(10)
         
         fig = px.bar(location_group, y="City", x="# Laid Off",orientation='h')
         
         fig.update_layout(
-            title={
-                'text': 'Top 10 Cities with Layoffs',
-                'x': 0.5,  # Set the title's horizontal alignment to the center
-                'font': {'size': 24, 'family': 'Monospace, bold'}
-            },
+#             title={
+#                 'text': 'Top 10 Cities with Layoffs',
+#                 'x': 0.5,  # Set the title's horizontal alignment to the center
+#                 'font': {'size': 24, 'family': 'Monospace, bold'}
+#             },
             xaxis=dict(title=''),
-            yaxis=dict(title='')
+            yaxis=dict(title=''),
+            width=1500,
+            height=500,
+            margin=dict(l=0, r=0, t=40, b=0)
         )
         
         fig.update_traces(marker_color='rgba(254,206,186,255)')
         
-        st.plotly_chart(fig)
+        st.plotly_chart(fig,use_container_width=True)
 
 
     # +
     l1,l2 = st.columns(2)
 
     with l1:
+        st.markdown("<h3 style='text-align: center;'>Layoffs by Country</h3>", unsafe_allow_html=True)
         country_layoff(filtered_data,geo_json,"Layoffs by Country")
     with l2:
+        st.markdown("<h3 style='text-align: center;'>Layoffs by Cities</h3>", unsafe_allow_html=True)
         location_layoff(filtered_data)
     # -
 
     st.markdown(
         """
-        <div style='text-align: center; font-size:24px;'>
+        <h3 style='text-align: center; font-size:24px;'>
             LayOff Reports<br>
-        </div>
+        </h3>
         """,
         unsafe_allow_html=True
     )
 
-    st.dataframe(filtered_data[['Day','Company','Location HQ','Industry','Country','Stage','# Laid Off','Source']])
+    st.dataframe(filtered_data[['Day','Company','Location HQ','Industry','Country','Stage','# Laid Off','Source']],use_container_width=True)
 
 except Exception as e:
-    
+    st.error(e)
     st.error('Try another combination of filters')
