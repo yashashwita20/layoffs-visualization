@@ -27,13 +27,13 @@ def _requests_headers(user_agent: str) -> dict:
     return {"user-agent": user_agent, 
             "accept": "*/*",
             'x-airtable-accept-msgpack': 'true',
-    'x-airtable-application-id': 'app1PaujS9zxVGUZ4',
-    'x-airtable-inter-service-client': 'webClient',
-    'x-airtable-page-load-id': 'pglfkMix40FCtovav',
-    'x-early-prefetch': 'true',
-    'x-requested-with': 'XMLHttpRequest',
-    'x-time-zone': 'America/Chicago',
-    'x-user-locale': 'en',
+            'x-airtable-application-id': 'app1PaujS9zxVGUZ4',
+            'x-airtable-inter-service-client': 'webClient',
+            'x-airtable-page-load-id': 'pglfkMix40FCtovav',
+            'x-early-prefetch': 'true',
+            'x-requested-with': 'XMLHttpRequest',
+            'x-time-zone': 'America/Chicago',
+            'x-user-locale': 'en',
            }
 
 
@@ -103,7 +103,12 @@ async def discover_all_and_pick_readsharedviewdata_url_async(
             log(msg)
 
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        #browser = await p.chromium.launch(headless=True)
+        browser = await p.chromium.launch(
+                        headless=True,
+                        executable_path="/usr/bin/chromium",
+                        args=["--no-sandbox", "--disable-dev-shm-usage"],
+                    )
         context = await browser.new_context(user_agent=user_agent)
 
         # Speed: block heavy assets
