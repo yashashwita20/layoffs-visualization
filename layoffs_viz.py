@@ -1,3 +1,4 @@
+# +
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -5,12 +6,14 @@ import plotly.express as px
 import plotly.graph_objects as go
 import plotly.subplots as sp
 import json
-import requests
-import os
 
-if os.getenv("STREAMLIT_ENV") != "cloud":
-    from dotenv import load_dotenv
-    load_dotenv()
+from layoffs_data import (
+    Target,
+    load_target,
+    load_page_url,
+    discover_picked_url,
+    fetch_json,
+)
 
 # +
 # Read the world.geojson file
@@ -22,48 +25,35 @@ st.set_page_config(layout="wide")
 
 # ## Loading Data
 
-# +
-cookies = {
-    '__Host-airtable-session': os.getenv('AIRTABLE_SESSION'),
-    '__Host-airtable-session.sig': os.getenv('AIRTABLE_SIG'),
-    'brw': os.getenv('BRW'),
-    'brwConsent': os.getenv('BRW_CONSENT'),
-    'AWSALBTGCORS': os.getenv('AWSALBTGCORS'),
-}
+PAGE_URL = load_page_url()
 
-headers = {
-    'accept': '*/*',
-    'accept-language': 'en-US,en;q=0.9',
-    'priority': 'u=1, i',
-    'sec-ch-ua': '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"macOS"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'sec-fetch-storage-access': 'active',
-    'traceparent': '00-9f1afa5c9fb858efedeef7dafe3f7d18-c6749b2977443f3b-01',
-    'tracestate': '',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
-    'x-airtable-accept-msgpack': 'true',
-    'x-airtable-application-id': 'app1PaujS9zxVGUZ4',
-    'x-airtable-inter-service-client': 'webClient',
-    'x-airtable-page-load-id': 'pglfkMix40FCtovav',
-    'x-early-prefetch': 'true',
-    'x-requested-with': 'XMLHttpRequest',
-    'x-time-zone': 'America/Chicago',
-    'x-user-locale': 'en',
-}
 
-url ='https://airtable.com/v0.3/view/viwN3RMGptp84mfag/readSharedViewData?stringifiedObjectParams=%7B%22shouldUseNestedResponseFormat%22%3Atrue%7D&requestId=reqaIYa4tXkIhE8Po&accessPolicy=%7B%22allowedActions%22%3A%5B%7B%22modelClassName%22%3A%22view%22%2C%22modelIdSelector%22%3A%22viwN3RMGptp84mfag%22%2C%22action%22%3A%22readSharedViewData%22%7D%2C%7B%22modelClassName%22%3A%22view%22%2C%22modelIdSelector%22%3A%22viwN3RMGptp84mfag%22%2C%22action%22%3A%22getMetadataForPrinting%22%7D%2C%7B%22modelClassName%22%3A%22view%22%2C%22modelIdSelector%22%3A%22viwN3RMGptp84mfag%22%2C%22action%22%3A%22readSignedAttachmentUrls%22%7D%2C%7B%22modelClassName%22%3A%22row%22%2C%22modelIdSelector%22%3A%22rows%20*%5BdisplayedInView%3DviwN3RMGptp84mfag%5D%22%2C%22action%22%3A%22createDocumentPreviewSession%22%7D%2C%7B%22modelClassName%22%3A%22view%22%2C%22modelIdSelector%22%3A%22viwN3RMGptp84mfag%22%2C%22action%22%3A%22downloadCsv%22%7D%2C%7B%22modelClassName%22%3A%22view%22%2C%22modelIdSelector%22%3A%22viwN3RMGptp84mfag%22%2C%22action%22%3A%22downloadICal%22%7D%2C%7B%22modelClassName%22%3A%22row%22%2C%22modelIdSelector%22%3A%22rows%20*%5BdisplayedInView%3DviwN3RMGptp84mfag%5D%22%2C%22action%22%3A%22downloadAttachment%22%7D%5D%2C%22shareId%22%3A%22shroKsHx3SdYYOzeh%22%2C%22applicationId%22%3A%22app1PaujS9zxVGUZ4%22%2C%22generationNumber%22%3A0%2C%22expires%22%3A%222025-07-31T00%3A00%3A00.000Z%22%2C%22signature%22%3A%22033b9a1a40aa550ecf4bea5cba6cacaac6f08e70659982324770f43d5f62a338%22%7D'
+@st.cache_data(ttl=10 * 24 * 60 * 60, show_spinner=True)
+def get_latest_json_cached(page_url: str, view_id: str, share_id: str):
+    # Cache-friendly: only primitives as inputs
+    target = Target(view_id=view_id, share_id=share_id)
+    picked_url, all_urls, matching_urls = discover_picked_url(
+        page_url=page_url,
+        target=target,
+        settle_ms=12_000,
+    )
+    data = fetch_json(picked_url)
+    return picked_url, all_urls, matching_urls, data
 
-# +
-response = requests.get(url,
-    cookies=cookies,
-    headers=headers,
+
+target = load_target()
+
+picked_url, all_urls, matching_urls, json_data = get_latest_json_cached(
+    PAGE_URL, target.view_id, target.share_id
 )
 
-json_data = response.json()
+# +
+# Only for Jupyter
+
+# from layoffs_data import Target, discover_all_and_pick_readsharedviewdata_url_async, fetch_json 
+
+# picked_url, all_urls, matching_urls = await discover_all_and_pick_readsharedviewdata_url_async( page_url=PAGE_URL, target=target, settle_ms=12_000, log=print ) 
+# json_data = fetch_json(picked_url)
 # -
 
 # ### Data Preprocessing
