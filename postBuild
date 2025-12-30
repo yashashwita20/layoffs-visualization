@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 set -e
+echo "Running postBuild: installing Playwright Chromium..."
 python -m playwright install chromium
