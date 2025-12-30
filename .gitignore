@@ -1,7 +1,8 @@
 .env
 .ipynb_checkpoints/
-.DS_Store/
-.DS_Store
 __pycache__/
 *.pyc
 .streamlit/secrets.toml
+.DS_Store
+**/.DS_Store
+.devcontainer/
