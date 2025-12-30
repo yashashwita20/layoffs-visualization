@@ -65,6 +65,9 @@ for item in json_data['data']['table']['columns']:
     id_ = item['id']
     name_ = item['name']
     key_map[id_] = name_
+# -
+
+print(key_map)
 
 # +
 key_map_switch = { key_map[k]:k for k in key_map}
